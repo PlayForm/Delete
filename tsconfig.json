@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"outDir": "Target"
+		"outDir": "Target",
+		"types": ["@cloudflare/workers-types"]
 	},
 	"extends": "baxast/Target/Configuration/TypeScript",
 	"include": ["Source"]
