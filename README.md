@@ -1,4 +1,4 @@
-# [deploymentdelete] 🚮
+# [deploymentdelete] ♻️
 
 This utility deletes deployments older than 7 days for Cloudflare Pages.
 
@@ -38,7 +38,7 @@ You can also publish it as a worker:
 wrangler publish
 ```
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeleteDeployment)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeploymentDelete)
 
 See running it on a schedule -
 https://developers.cloudflare.com/workers/configuration/cron-triggers/
