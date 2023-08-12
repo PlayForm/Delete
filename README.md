@@ -48,7 +48,7 @@ wrangler publish
 ```ts
 import Delete from "deploymentdelete/Target/Library/Delete.js";
 
-await Delete(Env.Email, Env.ID, Env.Key);
+await Delete(Email, ID, Key);
 ```
 
 **.env**
