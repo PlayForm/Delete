@@ -1,4 +1,6 @@
+import Deployment from "../Library/Deployment.js";
 import Environment from "../Library/Environment.js";
+import Project from "../Library/Project.js";
 
 const Days = 7;
 const Limit = 40;
@@ -17,29 +19,24 @@ export default async (
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
-	console.log(Email);
-	console.log(ID);
-	console.log(Key);
+	const Deleted = [];
 
-	// const Deleted = [];
+	for (const { name } of await Project(ID, Header)) {
+		for (const { id } of (await Deployment(ID, name, Header)).splice(
+			0,
+			Limit
+		)) {
+			await fetch(
+				`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${name}/deployments`}/${id}`,
+				{
+					method: "DELETE",
+					headers: Header,
+				}
+			);
 
-	// for (const Project of await _Project(ID, Header)) {
-	// 	for (const Deployment of (
-	// 		await _Deployment(ID, Project.name, Header)
-	// 	).splice(0, Limit)) {
-	// 		await fetch(
-	// 			`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project.name}/deployments`}/${
-	// 				Deployment.id
-	// 			}`,
-	// 			{
-	// 				method: "DELETE",
-	// 				headers: Header,
-	// 			}
-	// 		);
+			Deleted.push(id);
+		}
+	}
 
-	// 		Deleted.push(Deployment.id);
-	// 	}
-	// }
-
-	// return Deleted;
+	return Deleted;
 };
