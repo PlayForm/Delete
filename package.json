@@ -3,6 +3,20 @@
 	"version": "0.0.1",
 	"private": false,
 	"description": "Deletes all deployments associated with all the projects in the account using the Cloudflare API",
+	"keywords": [
+		"cloudflare",
+		"delete",
+		"deployment",
+		"worker"
+	],
+	"homepage": "https://github.com/NikolaRHristov/DeploymentDelete#readme",
+	"bugs": {
+		"url": "https://github.com/NikolaRHristov/DeploymentDelete/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NikolaRHristov/DeploymentDelete.git"
+	},
 	"license": "MIT",
 	"type": "module",
 	"main": "./Target/Delete.js",
