@@ -1,6 +1,6 @@
 # [deploymentdelete] 🚮
 
-This package deletes deployments older than 7 days for Cloudflare Pages.
+This utility deletes deployments older than 7 days for Cloudflare Pages.
 
 ## Installation
 
