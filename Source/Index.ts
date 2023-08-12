@@ -4,9 +4,9 @@ import _JSON from "./Library/JSON.js";
 
 try {
 	new Command()
-		.name("dod")
+		.name("dd")
 		.version((await _JSON("../package.json", import.meta.url))?.version)
-		.description("Delete old deployment")
+		.description("Deletes old deployments in your Cloudflare account.")
 		.option("-e, --Email <Email>", "Cloudflare Account Email")
 		.option("-k, --Key <Key>", "Cloudflare API key")
 		.option("-i, --ID <ID>", "Cloudflare Account ID")

@@ -1,11 +1,11 @@
 {
-	"name": "delete-old-deployment",
+	"name": "deploymentdelete",
 	"version": "0.0.1",
 	"type": "module",
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"dod": "Target/Bin.js"
+		"dd": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "baxast 'Source/**/*.ts'"

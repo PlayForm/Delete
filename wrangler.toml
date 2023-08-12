@@ -1,7 +1,6 @@
-name = "delete-old-deployment"
-main = "./Target/Index.js"
+name = "deploymentdelete"
+main = "./Target/Worker.js"
 compatibility_date = "2023-05-18"
-compatibility_flags = ["nodejs_compat"]
 keep_vars = true
 send_metrics = true
 tsconfig = "./tsconfig.json"
