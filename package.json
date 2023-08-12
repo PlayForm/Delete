@@ -1,6 +1,6 @@
 {
 	"name": "deploymentdelete",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": false,
 	"description": "Deletes all deployments associated with all the projects in the account using the Cloudflare API",
 	"keywords": [

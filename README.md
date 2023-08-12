@@ -55,6 +55,14 @@ import Delete from "deploymentdelete";
 await Delete(Email, ID, Key);
 ```
 
+**`.env`**
+
+```ts
+Email="example@account.com"
+ID="accountId"
+Key="accountKey"
+```
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
