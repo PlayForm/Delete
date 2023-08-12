@@ -9,7 +9,7 @@ export const Header = {
 };
 
 export const Days = 7;
-export const Limit = 40;
+export const Limit = 1000;
 
 /**
  * The Delete function deletes all deployments associated with a specific project ID using the

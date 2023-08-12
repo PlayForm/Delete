@@ -1,6 +1,6 @@
 declare const _default: {
-    Email: string;
     ID: string;
+    Email: string;
     Key: string;
 };
 export default _default;

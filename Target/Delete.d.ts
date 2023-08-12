@@ -4,7 +4,7 @@ export declare const Header: {
     "X-Auth-Key": string;
 };
 export declare const Days = 7;
-export declare const Limit = 40;
+export declare const Limit = 1000;
 /**
  * The Delete function deletes all deployments associated with a specific project ID using the
  * Cloudflare API.

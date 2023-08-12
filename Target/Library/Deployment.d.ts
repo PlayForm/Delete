@@ -1,4 +1,5 @@
 /// <reference types="@cloudflare/workers-types" />
+import type { Env } from "../Worker.ts";
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
  * information for a specific project.
@@ -10,7 +11,7 @@
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-declare const _default: (ID: string, Project: string, Header: HeadersInit) => Promise<{
+declare const _default: (ID: Env["ID"], Project: string, Header: HeadersInit) => Promise<{
     created_on: Date;
     id: string;
 }[]>;
