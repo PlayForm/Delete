@@ -15,7 +15,8 @@ DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
 DeploymentDelete will now delete deployments associated with all the projects in
-the account using the Cloudflare API older than 7 days.
+the account using the Cloudflare API older than 7 days. You might need to re-run
+this several times as it only deletes 40 deployments at a time.
 
 > **Note**
 >
@@ -40,6 +41,9 @@ wrangler publish
 ```
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeleteDeployment)
+
+See running it on a schedule -
+https://developers.cloudflare.com/workers/configuration/cron-triggers/
 
 ## Programmatically
 

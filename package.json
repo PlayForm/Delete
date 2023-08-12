@@ -2,9 +2,10 @@
 	"name": "deploymentdelete",
 	"version": "0.0.1",
 	"description": "Deletes all deployments associated with all the projects in the account using the Cloudflare API",
+	"license": "MIT",
 	"type": "module",
-	"main": "./Target/Index.js",
-	"types": "./Target/Index.d.ts",
+	"main": "./Target/Delete.js",
+	"types": "./Target/Delete.d.ts",
 	"bin": {
 		"DeploymentDelete": "Target/Bin.js"
 	},

@@ -7,3 +7,5 @@
 wrangler.toml
 CHANGELOG.md
 Source/
+Target/Worker.d.ts
+Target/Worker.js

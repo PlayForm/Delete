@@ -1,6 +1,6 @@
-import Deployment from "../Library/Deployment.js";
-import Environment from "../Library/Environment.js";
-import Project from "../Library/Project.js";
+import Deployment from "./Library/Deployment.js";
+import Environment from "./Library/Environment.js";
+import Project from "./Library/Project.js";
 
 export const Header = {
 	"content-type": "application/json;charset=UTF-8",

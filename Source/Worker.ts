@@ -1,6 +1,6 @@
 import type { ExecutionContext } from "@cloudflare/workers-types/experimental";
 
-import Delete from "./Library/Delete.js";
+import Delete from "./Delete.js";
 import Response from "./Library/Response.js";
 
 export interface Env {

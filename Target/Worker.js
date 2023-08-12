@@ -1,1 +1,1 @@
-import t from"./Library/Delete.js";import n from"./Library/Response.js";var l={fetch:async(o,e,r)=>n(await t(e.Email,e.ID,e.Key)),scheduled:async(o,e,r)=>console.log(await t(e.Email,e.ID,e.Key))};export{l as default};
+import t from"./Delete.js";import n from"./Library/Response.js";var l={fetch:async(o,e,r)=>n(await t(e.Email,e.ID,e.Key)),scheduled:async(o,e,r)=>console.log(await t(e.Email,e.ID,e.Key))};export{l as default};
