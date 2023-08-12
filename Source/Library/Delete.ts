@@ -1,6 +1,4 @@
-import _Deployment from "../Library/Deployment.js";
 import Environment from "../Library/Environment.js";
-import _Project from "../Library/Project.js";
 
 const Days = 7;
 const Limit = 40;
@@ -12,32 +10,36 @@ export const Header = {
 };
 
 export default async (
-	Email?: string,
-	ID: string = Environment.ID,
-	Key?: string
+	Email = Environment.Email,
+	Key = Environment.Key,
+	ID = Environment.ID
 ) => {
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
-	const Deleted = [];
+	console.log(Email);
+	console.log(ID);
+	console.log(Key);
 
-	for (const Project of await _Project(ID, Header)) {
-		for (const Deployment of (
-			await _Deployment(ID, Project.name, Header)
-		).splice(0, Limit)) {
-			await fetch(
-				`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project.name}/deployments`}/${
-					Deployment.id
-				}`,
-				{
-					method: "DELETE",
-					headers: Header,
-				}
-			);
+	// const Deleted = [];
 
-			Deleted.push(Deployment.id);
-		}
-	}
+	// for (const Project of await _Project(ID, Header)) {
+	// 	for (const Deployment of (
+	// 		await _Deployment(ID, Project.name, Header)
+	// 	).splice(0, Limit)) {
+	// 		await fetch(
+	// 			`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project.name}/deployments`}/${
+	// 				Deployment.id
+	// 			}`,
+	// 			{
+	// 				method: "DELETE",
+	// 				headers: Header,
+	// 			}
+	// 		);
 
-	return Deleted;
+	// 		Deleted.push(Deployment.id);
+	// 	}
+	// }
+
+	// return Deleted;
 };
