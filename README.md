@@ -8,7 +8,7 @@ This package deletes deployments older than 7 days for Cloudflare Pages.
 npm install -g deploymentdelete
 ```
 
-## Usage
+## CLI Usage
 
 ```sh
 DeploymentDelete -e example@account.com -i accountId -k accountKey
@@ -31,6 +31,8 @@ DeploymentDelete -e example@account.com -i accountId -k accountKey
 This deletes all deployments associated with all the projects in the account
 using the Cloudflare API.
 
+## Worker
+
 You can also publish it as a worker:
 
 ```sh
@@ -38,5 +40,23 @@ wrangler publish
 ```
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeleteDeployment)
+
+## Programmatically
+
+**Source/Index.ts**
+
+```ts
+import Delete from "deploymentdelete/Target/Library/Delete.js";
+
+await Delete(Env.Email, Env.ID, Env.Key);
+```
+
+**.env**
+
+```
+Email=""
+ID=""
+Key=""
+```
 
 [deploymentdelete]: https://npmjs.org/deploymentdelete
