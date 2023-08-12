@@ -14,6 +14,16 @@ npm install -g deploymentdelete
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
+## Options
+
+```sh
+  -V, --version        output the version number
+  -e, --Email <Email>  Cloudflare Account Email.
+  -i, --ID <ID>        Cloudflare Account ID.
+  -k, --Key <Key>      Cloudflare API key.
+  -h, --help           display help for command
+```
+
 > **Note**
 >
 > This will not delete your last running deployment.
