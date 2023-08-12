@@ -1,6 +1,6 @@
 {
 	"name": "deploymentdelete",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": false,
 	"description": "♻️ Deletes all Cloudflare deployments associated with an account.",
 	"keywords": [
