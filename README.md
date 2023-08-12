@@ -5,13 +5,13 @@ This package deletes deployments older than 7 days for Cloudflare Pages.
 ## Installation
 
 ```sh
-npm install -g deletedeployment
+npm install -g deploymentdelete
 ```
 
 ## Usage
 
 ```sh
-deletedeployment -e example@account.com -i accountId -k accountKey
+DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
 This deletes all deployments associated with all the projects in the account
