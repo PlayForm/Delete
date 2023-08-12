@@ -1,9 +1,18 @@
 name: Cloudflare
 
+concurrency:
+    group: Cloudflare-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 on:
+    workflow_dispatch:
     push:
+        branches: [main]
     pull_request:
+        branches: [main]
+    workflow_call:
     repository_dispatch:
+
 jobs:
     Deploy:
         runs-on: ubuntu-latest
