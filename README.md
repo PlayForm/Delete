@@ -51,12 +51,4 @@ import Delete from "deploymentdelete/Target/Library/Delete.js";
 await Delete(Email, ID, Key);
 ```
 
-**.env**
-
-```
-Email=""
-ID=""
-Key=""
-```
-
 [deploymentdelete]: https://npmjs.org/deploymentdelete
