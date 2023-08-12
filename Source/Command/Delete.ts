@@ -29,28 +29,33 @@ const Deployments = async (Project: string) =>
 	).json();
 
 const Delete = async (Email?: string, ID?: string, Key?: string) => {
-	for (const Project of await Projects()) {
-		for (const deployment of await Deployments(Project.name).splice(
-			0,
-			Limit
-		)) {
-			if (
-				// @ts-ignore
-				(Date.now() - new Date(deployment.created_on)) / 86400000 >
-				Days
-			) {
-				await fetch(
-					`${`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects/${Project}/deployments`}/${
-						deployment.id
-					}`,
-					{
-						method: "DELETE",
-						headers,
-					}
-				);
-			}
-		}
-	}
+	headers["X-Auth-Email"] = Email ?? headers["X-Auth-Email"];
+	headers["X-Auth-Key"] = Key ?? headers["X-Auth-Key"];
+
+	console.log(await Projects());
+	// for (const Project of await Projects()) {
+
+	// 	for (const deployment of await Deployments(Project.name).splice(
+	// 		0,
+	// 		Limit
+	// 	)) {
+	// 		if (
+	// 			// @ts-ignore
+	// 			(Date.now() - new Date(deployment.created_on)) / 86400000 >
+	// 			Days
+	// 		) {
+	// 			await fetch(
+	// 				`${`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects/${Project}/deployments`}/${
+	// 					deployment.id
+	// 				}`,
+	// 				{
+	// 					method: "DELETE",
+	// 					headers,
+	// 				}
+	// 			);
+	// 		}
+	// 	}
+	// }
 };
 
 export default Delete;
