@@ -9,7 +9,7 @@ try {
 		.name("DeploymentDelete")
 		.version((await _JSON("../package.json", import.meta.url))?.version)
 		.description("Deletes old deployments in your Cloudflare account.")
-		.option("-e, --Email <Email>", "Cloudflare Account Email.")
+		.option("-e, --Email <Email>", "Cloudflare Account E-mail.")
 		.option("-i, --ID <ID>", "Cloudflare Account ID.")
 		.option("-k, --Key <Key>", "Cloudflare API key.")
 		.action(async (Options) =>

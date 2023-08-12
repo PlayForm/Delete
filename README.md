@@ -26,7 +26,7 @@ this several times as it only deletes 40 deployments at a time.
 
 ```sh
   -V, --version        output the version number
-  -e, --Email <Email>  Cloudflare Account Email.
+  -e, --Email <Email>  Cloudflare Account E-mail.
   -i, --ID <ID>        Cloudflare Account ID.
   -k, --Key <Key>      Cloudflare API key.
   -h, --help           display help for command
