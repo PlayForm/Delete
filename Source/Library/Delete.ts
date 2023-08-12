@@ -19,7 +19,7 @@ export default async (
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
-	const Deleted = ['5'];
+	const Deleted = [];
 
 	for (const Project of await _Project(ID, Header)) {
 		for (const Deployment of (
