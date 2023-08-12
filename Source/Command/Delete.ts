@@ -4,8 +4,8 @@ const Days = 7;
 const Limit = 40;
 const headers = {
 	"content-type": "application/json;charset=UTF-8",
-	"X-Auth-Email": Environment.ACCOUNT_EMAIL,
-	"X-Auth-Key": Environment.API_KEY,
+	"X-Auth-Email": Environment.Email,
+	"X-Auth-Key": Environment.Key,
 };
 
 const Projects = async () =>

@@ -4,16 +4,18 @@ import Delete from "./Command/Delete.js";
 import Response from "./Library/Response.js";
 
 export interface Env {
-	ACCOUNT_EMAIL?: string;
-	ACCOUNT_ID?: string;
-	API_KEY?: string;
+	Email?: string;
+	ID?: string;
+	Key?: string;
 }
 
 export default <ExportedHandler<Env>>{
-	fetch: async (_request: Request, _env: Env, _ctx: ExecutionContext) => {
-		Delete(_env.ACCOUNT_EMAIL, _env.ACCOUNT_ID, _env.API_KEY);
+	fetch: async (_Request: Request, Env: Env, _Context: ExecutionContext) => {
+		Delete(Env.Email, Env.ID, Env.Key);
 
 		return Response();
 	},
-	scheduled: async (_env: Env) => {},
+	scheduled: async (_Controller, Env, _Context) => {
+		Delete(Env.Email, Env.ID, Env.Key);
+	},
 };

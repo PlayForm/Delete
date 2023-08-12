@@ -5,8 +5,8 @@ dotenv.config();
 
 export default z
 	.object({
-		ACCOUNT_EMAIL: z.string().default(""),
+		Email: z.string().default(""),
 		ACCOUNT_ID: z.string().default(""),
-		API_KEY: z.string().default(""),
+		Key: z.string().default(""),
 	})
 	.parse(process.env);
