@@ -1,6 +1,6 @@
 # [deploymentdelete] ♻️
 
-This utility deletes deployments older than 7 days for Cloudflare Pages.
+This utility deletes all deployments older than 7 days in your Cloudflare Pages account.
 
 ## Installation
 
@@ -13,8 +13,6 @@ npm install -g deploymentdelete
 ```sh
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
-
-DeploymentDelete will now delete all deployments associated with the account.
 
 > **Note**
 >
