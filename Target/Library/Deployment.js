@@ -1,1 +1,1 @@
-var a=async(t,e,s)=>(await(await fetch(`https://api.cloudflare.com/client/v4/accounts/${t}/pages/projects/${e}/deployments`,{headers:s})).json())?.result;export{a as default};
+import{fetch as s}from"@cloudflare/workers-types/experimental";var o=async(e,t,r)=>(await(await s(`https://api.cloudflare.com/client/v4/accounts/${e}/pages/projects/${t}/deployments`,{headers:r})).json())?.result;export{o as default};

@@ -1,4 +1,6 @@
 import type { Env } from "../Worker.ts";
+import type { HeadersInit } from "@cloudflare/workers-types/experimental";
+import { fetch } from "@cloudflare/workers-types/experimental";
 
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
