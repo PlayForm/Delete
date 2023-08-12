@@ -1,0 +1,7 @@
+{
+    "name": "delete-old-deployment",
+    "version": "0.0.1",
+    "devDependencies": {
+        "baxast": "workspace:0.1.0"
+    }
+}

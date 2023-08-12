@@ -1,0 +1,7 @@
+{
+	"compilerOptions": {
+		"outDir": "Target"
+	},
+	"extends": "baxast/Target/Configuration/TypeScript",
+	"include": ["Source"]
+}
