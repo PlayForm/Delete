@@ -19,6 +19,8 @@ export default async (
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
+	const Deleted = ['5'];
+
 	for (const Project of await _Project(ID, Header)) {
 		for (const Deployment of (
 			await _Deployment(ID, Project.name, Header)
@@ -32,6 +34,10 @@ export default async (
 					headers: Header,
 				}
 			);
+
+			Deleted.push(Deployment.id);
 		}
 	}
+
+	return Deleted;
 };

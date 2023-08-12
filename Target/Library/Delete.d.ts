@@ -3,5 +3,5 @@ export declare const Header: {
     "X-Auth-Email": string;
     "X-Auth-Key": string;
 };
-declare const _default: (Email?: string, ID?: string, Key?: string) => Promise<void>;
+declare const _default: (Email?: string, ID?: string, Key?: string) => Promise<string[]>;
 export default _default;
