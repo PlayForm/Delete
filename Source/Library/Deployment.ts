@@ -1,8 +1,8 @@
-export default async (Project: string) =>
+export default async (ID: string, Project: string, Header: HeadersInit) =>
 	(
 		(await (
 			await fetch(
-				`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects/${Project}/deployments`,
+				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments`,
 				{
 					headers: Header,
 				}
@@ -10,6 +10,10 @@ export default async (Project: string) =>
 		).json()) satisfies {
 			// rome-ignore lint/suspicious/noExplicitAny:
 			[key: string]: any;
-			results: [];
+
+			result: {
+				created_on: Date;
+				id: string;
+			}[];
 		}
-	)?.results;
+	)?.result;

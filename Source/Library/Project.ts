@@ -12,8 +12,10 @@ export default async (ID: string, Header: HeadersInit) =>
 		).json()) satisfies {
 			// rome-ignore lint/suspicious/noExplicitAny:
 			[key: string]: any;
-			results: {
+
+			result: {
+				id: string;
 				name: string;
 			}[];
 		}
-	)?.results;
+	)?.result;

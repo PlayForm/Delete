@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import Delete from "./Command/Delete.js";
+import Delete from "./Library/Delete.js";
 import _JSON from "./Library/JSON.js";
 
 try {
@@ -10,7 +10,10 @@ try {
 		.option("-e, --Email <Email>", "Cloudflare Account Email")
 		.option("-k, --Key <Key>", "Cloudflare API key")
 		.option("-i, --ID <ID>", "Cloudflare Account ID")
-		.action(Delete)
+		.action(
+			async (Options?: { Email?: string; ID?: string; Key?: string }) =>
+				await Delete(Options?.Email, Options?.ID, Options?.Key)
+		)
 		.parse();
 } catch (_Error) {
 	console.log(_Error);
