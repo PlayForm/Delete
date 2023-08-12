@@ -31,12 +31,12 @@ export default async (
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
 	const Deleted = [];
+	const Projects = (await Project(ID, Header)) ?? [];
+	const Deployments = async (Project: string) =>
+		(await Deployment(ID, Project, Header)).splice(0, Limit) ?? [];
 
-	for (const { name } of await Project(ID, Header)) {
-		for (const { id } of (await Deployment(ID, name, Header)).splice(
-			0,
-			Limit
-		)) {
+	for (const { name } of Projects) {
+		for (const { id } of await Deployments(name)) {
 			await fetch(
 				`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${name}/deployments`}/${id}`,
 				{
