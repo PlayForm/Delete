@@ -1,1 +1,1 @@
-import*as e from"dotenv";import{z as t}from"zod";e.config();var o=t.object({ACCOUNT_EMAIL:t.string().default(""),ACCOUNT_ID:t.string().default(""),API_KEY:t.string().default("")}).parse(process.env);export{o as default};
+import*as e from"dotenv";import{z as t}from"zod";e.config();var o=t.object({Email:t.string().default(""),ACCOUNT_ID:t.string().default(""),Key:t.string().default("")}).parse(process.env);export{o as default};

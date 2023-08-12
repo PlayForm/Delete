@@ -1,1 +1,1 @@
-import r from"./Command/Delete.js";import n from"./Library/Response.js";var i={fetch:async(t,e,o)=>(r(e.ACCOUNT_EMAIL,e.ACCOUNT_ID,e.API_KEY),n()),scheduled:async t=>{}};export{i as default};
+import t from"./Command/Delete.js";import n from"./Library/Response.js";var s={fetch:async(r,e,o)=>(t(e.Email,e.ID,e.Key),n()),scheduled:async(r,e,o)=>{t(e.Email,e.ID,e.Key)}};export{s as default};

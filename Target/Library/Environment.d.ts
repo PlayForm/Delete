@@ -1,6 +1,6 @@
 declare const _default: {
-    ACCOUNT_EMAIL: string;
+    Email: string;
     ACCOUNT_ID: string;
-    API_KEY: string;
+    Key: string;
 };
 export default _default;
