@@ -19,10 +19,10 @@ export default async (
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
-	return (await _Project(ID, Header)).forEach(async (Project) => {
-		(await _Deployment(ID, Project.name, Header)).splice(0, Limit).forEach(
-			async (Deployment) =>
-				await fetch(
+	return (await _Project(ID, Header)).forEach((Project) => {
+		_Deployment(ID, Project.name, Header).then((Deployment) =>
+			Deployment.splice(0, Limit).forEach((Deployment) =>
+				fetch(
 					`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project.name}/deployments`}/${
 						Deployment.id
 					}`,
@@ -30,7 +30,10 @@ export default async (
 						method: "DELETE",
 						headers: Header,
 					}
-				)
+				).then((Response) => {
+					console.log(Response);
+				})
+			)
 		);
 	});
 };
