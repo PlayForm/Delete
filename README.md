@@ -47,12 +47,16 @@ https://developers.cloudflare.com/workers/configuration/cron-triggers/
 
 ## Programmatically
 
-**Source/Index.ts**
+**`Source/Index.ts`**
 
 ```ts
-import Delete from "deploymentdelete/Target/Library/Delete.js";
+import Delete from "deploymentdelete";
 
 await Delete(Email, ID, Key);
 ```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
 [deploymentdelete]: https://npmjs.org/deploymentdelete
