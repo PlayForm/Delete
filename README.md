@@ -17,13 +17,11 @@ deletedeployment -e example@account.com -i accountId -k accountKey
 This deletes all deployments associated with all the projects in the account
 using the Cloudflare API.
 
-You can also deploy it as a worker:
+You can also publish it as a worker:
 
 ```sh
 wrangler publish
 ```
-
-or as a GitHub action:
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeleteDeployment)
 
