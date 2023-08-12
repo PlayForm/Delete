@@ -23,4 +23,8 @@ You can also deploy it as a worker:
 wrangler publish
 ```
 
+or as a GitHub action:
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeleteDeployment)
+
 [deploymentdelete]: https://npmjs.org/deploymentdelete

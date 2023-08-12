@@ -1,0 +1,16 @@
+name: Cloudflare
+
+on:
+    push:
+    pull_request:
+    repository_dispatch:
+jobs:
+    Deploy:
+        runs-on: ubuntu-latest
+        timeout-minutes: 60
+        steps:
+            - uses: actions/checkout@v3.5.3
+            - uses: cloudflare/wrangler-action@v3.0.2
+              with:
+                  apiToken: ${{ secrets.CF_API_TOKEN }}
+                  accountId: ${{ secrets.CF_ACCOUNT_ID }}
