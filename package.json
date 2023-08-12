@@ -5,7 +5,7 @@
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"bin": {
-		"dd": "Target/Bin.js"
+		"DeploymentDelete": "Target/Bin.js"
 	},
 	"scripts": {
 		"prepublishOnly": "baxast 'Source/**/*.ts'"

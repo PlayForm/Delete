@@ -4,7 +4,7 @@ import _JSON from "./Library/JSON.js";
 
 try {
 	new Command()
-		.name("dd")
+		.name("DeploymentDelete")
 		.version((await _JSON("../package.json", import.meta.url))?.version)
 		.description("Deletes old deployments in your Cloudflare account.")
 		.option("-e, --Email <Email>", "Cloudflare Account Email")
