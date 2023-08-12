@@ -1,12 +1,10 @@
-import * as dotenv from "dotenv";
-import { z } from "zod";
+import * as Environment from "dotenv";
+import { z as Zod } from "zod";
 
-dotenv.config();
+Environment.config();
 
-export default z
-	.object({
-		Email: z.string().default(""),
-		ID: z.string().default(""),
-		Key: z.string().default(""),
-	})
-	.parse(process.env);
+export default Zod.object({
+	Email: Zod.string().default(""),
+	ID: Zod.string().default(""),
+	Key: Zod.string().default(""),
+}).parse(process.env);
