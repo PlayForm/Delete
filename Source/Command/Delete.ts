@@ -11,7 +11,7 @@ const headers = {
 const Projects = async () =>
 	await (
 		await fetch(
-			`https://api.cloudflare.com/client/v4/accounts/${Environment.ACCOUNT_ID}/pages/projects`,
+			`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects`,
 			{
 				headers,
 			}
@@ -21,7 +21,7 @@ const Projects = async () =>
 const Deployments = async (Project: string) =>
 	await (
 		await fetch(
-			`https://api.cloudflare.com/client/v4/accounts/${Environment.ACCOUNT_ID}/pages/projects/${Project}/deployments`,
+			`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects/${Project}/deployments`,
 			{
 				headers,
 			}
@@ -40,7 +40,7 @@ const Delete = async (Email?: string, ID?: string, Key?: string) => {
 				Days
 			) {
 				await fetch(
-					`${`https://api.cloudflare.com/client/v4/accounts/${Environment.ACCOUNT_ID}/pages/projects/${Project}/deployments`}/${
+					`${`https://api.cloudflare.com/client/v4/accounts/${Environment.ID}/pages/projects/${Project}/deployments`}/${
 						deployment.id
 					}`,
 					{
