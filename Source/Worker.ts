@@ -5,7 +5,9 @@ import Response from "./Library/Response.js";
 
 export interface Env {
 	Email?: string;
+
 	ID?: string;
+
 	Key?: string;
 }
 
