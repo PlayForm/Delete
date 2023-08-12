@@ -7,9 +7,9 @@ try {
 		.name("dod")
 		.version((await _JSON("../package.json", import.meta.url))?.version)
 		.description("Delete old deployment")
-		.option("-e, --Email <Email>", "Cloudflare account email")
-		.option("-k, --Key <Key>", "Cloudflare API")
-		.option("-i, --ID <ID>", "Cloudflare account ID")
+		.option("-e, --Email <Email>", "Cloudflare Account Email")
+		.option("-k, --Key <Key>", "Cloudflare API key")
+		.option("-i, --ID <ID>", "Cloudflare Account ID")
 		.action(Delete)
 		.parse();
 } catch (_Error) {
