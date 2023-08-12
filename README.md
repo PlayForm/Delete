@@ -14,12 +14,12 @@ npm install -g deploymentdelete
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
+DeploymentDelete will now delete deployments associated with all the projects in
+the account using the Cloudflare API older than 7 days.
+
 > **Note**
 >
 > This will not delete your last running deployment.
-
-This deletes all deployments associated with all the projects in the account
-using the Cloudflare API.
 
 ## Options
 
