@@ -1,5 +1,4 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
-import { fetch } from "@cloudflare/workers-types/experimental";
 
 /**
  * The function `Project` makes an asynchronous request to the Cloudflare API to fetch a

@@ -1,4 +1,4 @@
-/// <reference types="@cloudflare/workers-types" />
+/// <reference types="@cloudflare/workers-types/experimental" />
 export interface Env {
     Email?: string;
     ID?: string;

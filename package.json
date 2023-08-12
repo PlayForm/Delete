@@ -1,6 +1,6 @@
 {
 	"name": "deploymentdelete",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"private": false,
 	"description": "Deletes all deployments associated with all the projects in the account using the Cloudflare API",
 	"keywords": [
@@ -33,6 +33,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230807.0",
+		"@types/node": "20.4.10",
 		"baxast": "0.1.0"
 	},
 	"publishConfig": {

@@ -1,4 +1,4 @@
-/// <reference types="@cloudflare/workers-types" />
+/// <reference types="@cloudflare/workers-types/experimental" />
 /**
  * The function `Response` is an asynchronous function that returns a response object with a JSON
  * stringified message and a specified status code.

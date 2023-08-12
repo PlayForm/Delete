@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
+		"lib": ["ESNext"],
 		"outDir": "Target",
-		"types": ["@cloudflare/workers-types"]
+		"types": ["@cloudflare/workers-types/experimental", "@types/node"]
 	},
 	"extends": "baxast/Target/Configuration/TypeScript",
 	"include": ["Source"]
