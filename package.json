@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230807.0",
 		"@types/node": "20.4.10",
-		"syclone": "0.1.6"
+		"typescript-build": "0.1.6"
 	},
 	"publishConfig": {
 		"access": "public"
