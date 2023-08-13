@@ -4,6 +4,6 @@
 		"outDir": "Target",
 		"types": ["@cloudflare/workers-types/experimental", "@types/node"]
 	},
-	"extends": "@nikolarhristov/tsbundle/Target/Configuration/TypeScript",
+	"extends": "syclone/Target/Configuration/TypeScript",
 	"include": ["Source"]
 }
