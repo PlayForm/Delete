@@ -25,7 +25,7 @@
 		"DeploymentDelete": "Target/Bin.js"
 	},
 	"scripts": {
-		"prepublishOnly": "Syclone 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"dotenv": "16.3.1",
