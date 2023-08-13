@@ -1,11 +1,11 @@
-# [deploymentdelete] ♻️
+# [deployment-delete] ♻️
 
 This utility deletes all deployments older than 7 days in your Cloudflare Pages account.
 
 ## Installation
 
 ```sh
-npm install -g deploymentdelete
+npm install -g deployment-delete
 ```
 
 ## CLI Usage
@@ -43,7 +43,7 @@ wrangler publish
 **`Source/Index.ts`**
 
 ```ts
-import Delete from "deploymentdelete";
+import Delete from "deployment-delete";
 
 await Delete(Email, ID, Key);
 ```
@@ -60,4 +60,4 @@ Key = "accountKey";
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[deploymentdelete]: https://npmjs.org/deploymentdelete
+[deployment-delete]: https://npmjs.org/deployment-delete
