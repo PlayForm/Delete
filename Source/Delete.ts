@@ -4,12 +4,6 @@ import Project from "./Library/Project.js";
 
 const Environment = Fn.parse(process.env);
 
-export const Header = {
-	"content-type": "application/json;charset=UTF-8",
-	"X-Auth-Email": Environment.Email,
-	"X-Auth-Key": Environment.Key,
-};
-
 export const Days = 7;
 export const Limit = 500;
 
@@ -29,6 +23,12 @@ export default async (
 	Key = Environment.Key,
 	ID = Environment.ID
 ) => {
+	const Header = {
+		"content-type": "application/json;charset=UTF-8",
+		"X-Auth-Email": Environment.Email,
+		"X-Auth-Key": Environment.Key,
+	};
+
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
