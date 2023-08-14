@@ -15,7 +15,7 @@ npm install -g deployment-delete
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
-or:
+or with an `.env` file:
 
 **`.env`**
 
@@ -23,6 +23,10 @@ or:
 Email = "example@account.com";
 ID = "accountId";
 Key = "accountKey";
+```
+
+```sh
+DeploymentDelete
 ```
 
 > **Note**
