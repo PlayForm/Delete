@@ -15,7 +15,7 @@ npm install -g deployment-delete
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
-or with an `.env` file:
+or:
 
 **`.env`**
 
