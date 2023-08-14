@@ -25,10 +25,6 @@ ID = "accountId";
 Key = "accountKey";
 ```
 
-```sh
-DeploymentDelete
-```
-
 > **Note**
 >
 > This will not delete your last running deployment.
