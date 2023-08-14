@@ -1,7 +1,7 @@
 # [DeploymentDelete] ♻️
 
 This utility deletes Cloudflare deployments older than 7 days. \
-More information - https://developers.cloudflare.com/api/#pages-deployment-delete-deployment
+https://developers.cloudflare.com/api/#pages-deployment-delete-deployment
 
 ## Installation
 
