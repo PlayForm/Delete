@@ -1,6 +1,8 @@
 import Deployment from "./Library/Deployment.js";
-import Environment from "./Library/Environment.js";
+import { Fn } from "./Library/Environment.js";
 import Project from "./Library/Project.js";
+
+const Environment = Fn.parse(process.env);
 
 export const Header = {
 	"content-type": "application/json;charset=UTF-8",

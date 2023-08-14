@@ -1,10 +1,12 @@
-import * as Environment from "dotenv";
 import { z as Zod } from "zod";
+export * as Environment from "dotenv";
 
-Environment.config();
-
-export default Zod.object({
+export const Fn = Zod.object({
 	Email: Zod.string().default(""),
 	ID: Zod.string().default(""),
 	Key: Zod.string().default(""),
-}).parse(process.env);
+});
+
+export type Type = Zod.infer<typeof Fn>;
+
+export type { Type as default };

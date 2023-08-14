@@ -3,5 +3,5 @@
 while true
 do
 	DeploymentDelete
-	sleep 300
+	sleep 60
 done

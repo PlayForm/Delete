@@ -1,5 +1,5 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
-import type { Env } from "../Worker.ts";
+import type Environment from "../Library/Environment.js";
 
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
@@ -12,7 +12,11 @@ import type { Env } from "../Worker.ts";
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-export default async (ID: Env["ID"], Project: string, Header: HeadersInit) =>
+export default async (
+	ID: Environment["ID"],
+	Project: string,
+	Header: HeadersInit
+) =>
 	(
 		(await (
 			await fetch(
