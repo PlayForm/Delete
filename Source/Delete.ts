@@ -39,13 +39,17 @@ export default async (
 				name
 			)
 		).reverse()) {
-			await fetch(
-				`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${name}/deployments`}/${id}`,
-				{
-					method: "DELETE",
-					headers: Header,
-				}
-			);
+			try {
+				await fetch(
+					`${`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${name}/deployments`}/${id}`,
+					{
+						method: "DELETE",
+						headers: Header,
+					}
+				);
+			} catch (_Error) {
+				console.log(_Error);
+			}
 
 			Deleted.push(id);
 		}
