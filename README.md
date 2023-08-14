@@ -16,16 +16,6 @@ npm install -g deployment-delete
 DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
-or:
-
-**`.env`**
-
-```ts
-Email = "example@account.com";
-ID = "accountId";
-Key = "accountKey";
-```
-
 > **Note**
 >
 > This will not delete your last running deployment.
@@ -58,6 +48,14 @@ wrangler publish
 import Delete from "deployment-delete";
 
 await Delete(Email, ID, Key);
+```
+
+**`.env`**
+
+```ts
+Email = "example@account.com";
+ID = "accountId";
+Key = "accountKey";
 ```
 
 ## Changelog
