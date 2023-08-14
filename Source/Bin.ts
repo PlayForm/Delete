@@ -12,8 +12,8 @@ try {
 		.option("-e, --Email <Email>", "Cloudflare Account E-mail.")
 		.option("-i, --ID <ID>", "Cloudflare Account ID.")
 		.option("-k, --Key <Key>", "Cloudflare API key.")
-		.action(async (Options) =>
-			console.log(await Delete(Options?.Email, Options?.ID, Options?.Key))
+		.action(async (Option) =>
+			console.log(await Delete(Option?.Email, Option?.ID, Option?.Key))
 		)
 		.parse();
 } catch (_Error) {

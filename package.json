@@ -25,7 +25,7 @@
 		"DeploymentDelete": "Target/Bin.js"
 	},
 	"scripts": {
-		"prepublishOnly": "TypeScriptBuild 'Source/**/*.ts'"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"dotenv": "16.3.1",
@@ -33,8 +33,8 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230807.0",
-		"@types/node": "20.4.10",
-		"typescript-build": "0.1.6"
+		"@types/node": "20.5.0",
+		"typescript-esbuild": "0.1.8"
 	},
 	"publishConfig": {
 		"access": "public"
