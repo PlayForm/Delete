@@ -9,18 +9,20 @@ account.
 npm install -g deployment-delete
 ```
 
+## CLI Usage
+
+```sh
+DeploymentDelete -e example@account.com -i accountId -k accountKey
+```
+
+or:
+
 **`.env`**
 
 ```ts
 Email = "example@account.com";
 ID = "accountId";
 Key = "accountKey";
-```
-
-## CLI Usage
-
-```sh
-DeploymentDelete -e example@account.com -i accountId -k accountKey
 ```
 
 > **Note**
