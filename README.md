@@ -1,4 +1,4 @@
-# [deployment-delete] ♻️
+# [DeploymentDelete] ♻️
 
 This utility deletes Cloudflare deployments older than 7 days. \
 More information - https://developers.cloudflare.com/api/#pages-deployment-delete-deployment
@@ -6,7 +6,7 @@ More information - https://developers.cloudflare.com/api/#pages-deployment-delet
 ## Installation
 
 ```sh
-npm install -g deployment-delete
+npm install -g deploymentdelete
 ```
 
 ## CLI Usage
@@ -44,7 +44,7 @@ wrangler publish
 **`Source/Index.ts`**
 
 ```ts
-import Delete from "deployment-delete";
+import Delete from "deploymentdelete";
 
 await Delete(Email, ID, Key);
 ```
@@ -61,4 +61,4 @@ Key = "accountKey";
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[deployment-delete]: https://npmjs.org/deployment-delete
+[DeploymentDelete]: https://npmjs.org/deploymentdelete
