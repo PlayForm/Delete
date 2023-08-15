@@ -1,8 +1,3 @@
-export declare const Header: {
-    "content-type": string;
-    "X-Auth-Email": string;
-    "X-Auth-Key": string;
-};
 export declare const Days = 7;
 export declare const Limit = 500;
 /**
