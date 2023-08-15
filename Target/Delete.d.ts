@@ -11,5 +11,5 @@ export declare const Limit = 500;
  * account for which the deployments need to be deleted.
  * @returns The function `Delete` returns an array of IDs that have been deleted.
  */
-declare const _default: (Email?: string, Key?: string, ID?: string) => Promise<string[]>;
+declare const _default: (Email?: string, Key?: string, ID?: string) => Promise<any[]>;
 export default _default;
