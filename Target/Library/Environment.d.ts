@@ -1,5 +1,4 @@
 import { z as Zod } from "zod";
-export * as Environment from "dotenv";
 export declare const Fn: Zod.ZodObject<{
     Email: Zod.ZodDefault<Zod.ZodString>;
     ID: Zod.ZodDefault<Zod.ZodString>;

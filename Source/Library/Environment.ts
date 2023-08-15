@@ -1,5 +1,7 @@
+import * as Environment from "dotenv";
 import { z as Zod } from "zod";
-export * as Environment from "dotenv";
+
+Environment.config();
 
 export const Fn = Zod.object({
 	Email: Zod.string().default(""),
