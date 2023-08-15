@@ -25,6 +25,6 @@ for Project in "${Projects[@]}"; do
         echo -e "$Project"
         echo -e "$Deployment"
 
-        curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" "https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments/${Deployment}" | jq .success
+        curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" "https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments/${Deployment}" | jq -r .success
     done
 done
