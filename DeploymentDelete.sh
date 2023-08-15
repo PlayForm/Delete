@@ -4,7 +4,7 @@
 source .env
 
 # Fill entries
-mapfile -t Projects < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects | jq -r '.result[].name')
+mapfile -t Projects < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email:?}" --header "X-Auth-Key: ${Key:?}" "https://api.cloudflare.com/client/v4/accounts/${ID:?}/pages/projects" | jq -r '.result[].name')
 
 # Clean entries
 for i in "${!Projects[@]}"; do
@@ -13,7 +13,7 @@ done
 
 # Fill entries
 for Project in "${Projects[@]}"; do
-    readarray -t Deployments < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/"${Project}"/deployments | jq -r .result[].id)
+    readarray -t Deployments < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" "https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments" | jq -r .result[].id)
 
     # Clean entries
     for i in "${!Deployments[@]}"; do
