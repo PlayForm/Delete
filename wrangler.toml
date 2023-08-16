@@ -3,7 +3,7 @@ main = "./Target/Worker.js"
 compatibility_date = "2023-05-18"
 node_compat = true
 keep_vars = true
-send_metrics = true
+send_metrics = false
 tsconfig = "./tsconfig.json"
 workers_dev = false
 
