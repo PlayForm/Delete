@@ -51,10 +51,10 @@ await Delete(Email, ID, Key);
 
 **`.env`**
 
-```ts
-Email = "example@account.com";
-ID = "accountId";
-Key = "accountKey";
+```env
+Email="example@account.com";
+ID="accountId";
+Key="accountKey";
 ```
 
 ## Changelog
