@@ -34,11 +34,11 @@
 	},
 	"dependencies": {
 		"dotenv": "16.3.1",
-		"zod": "3.22.1"
+		"zod": "3.22.2"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230814.0",
-		"@types/node": "20.5.0",
+		"@types/node": "20.5.1",
 		"typescript-esbuild": "0.1.14"
 	},
 	"publishConfig": {
