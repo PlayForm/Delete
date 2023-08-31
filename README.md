@@ -22,11 +22,11 @@ DeploymentDelete -e example@account.com -i accountId -k accountKey
 ## Options
 
 ```sh
-  -V, --version        output the version number
-  -e, --Email <Email>  Cloudflare Account E-mail.
-  -i, --ID <ID>        Cloudflare Account ID.
-  -k, --Key <Key>      Cloudflare API key.
-  -h, --help           display help for command
+-V, --version output the version number
+-e, --Email Account E-mail. < Email > Cloudflare
+-i, --ID Account ID. < ID > Cloudflare
+-k, --Key API key. < Key > Cloudflare
+-h, --help display help for command
 ```
 
 ## Worker
@@ -52,9 +52,9 @@ await Delete(Email, ID, Key);
 **`.env`**
 
 ```env
-Email="example@account.com";
-ID="accountId";
-Key="accountKey";
+Email="example@account.com"
+ID="accountId"
+Key="accountKey"
 ```
 
 ## Changelog
