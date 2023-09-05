@@ -1,5 +1,5 @@
 import { z as Zod } from "zod";
-export declare const Fn: Zod.ZodObject<{
+export declare const Function: Zod.ZodObject<{
     Email: Zod.ZodDefault<Zod.ZodString>;
     ID: Zod.ZodDefault<Zod.ZodString>;
     Key: Zod.ZodDefault<Zod.ZodString>;
@@ -12,5 +12,5 @@ export declare const Fn: Zod.ZodObject<{
     ID?: string | undefined;
     Key?: string | undefined;
 }>;
-export type Type = Zod.infer<typeof Fn>;
+export type Type = Zod.infer<typeof Function>;
 export type { Type as default };

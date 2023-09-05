@@ -1,8 +1,8 @@
 import Deployment from "./Library/Deployment.js";
-import { Function } from "./Library/Environment.js";
+import { Fn } from "./Library/Environment.js";
 import Project from "./Library/Project.js";
 
-const Environment = Function.parse(process.env);
+const Environment = Fn.parse(process.env);
 
 export const Days = 7;
 
