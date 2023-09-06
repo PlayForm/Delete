@@ -34,7 +34,7 @@ DeploymentDelete -e example@account.com -i accountId -k accountKey
 You can also publish it as a worker:
 
 ```sh
-wrangler publish
+wrangler deploy
 ```
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/NikolaRHristov/DeploymentDelete)
