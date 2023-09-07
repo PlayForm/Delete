@@ -6,7 +6,7 @@ https://developers.cloudflare.com/api/operations/pages-deployment-delete-deploym
 ## Installation
 
 ```sh
-npm install -g deploymentdelete
+npm install -g deployment-delete
 ```
 
 ## CLI Usage
@@ -44,7 +44,7 @@ wrangler deploy
 **`Source/Index.ts`**
 
 ```ts
-import Delete from "deploymentdelete";
+import Delete from "deployment-delete";
 
 await Delete(Email, ID, Key);
 ```
@@ -61,4 +61,4 @@ Key="accountKey"
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[DeploymentDelete]: https://npmjs.org/deploymentdelete
+[DeploymentDelete]: https://npmjs.org/deployment-delete
