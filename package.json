@@ -1,6 +1,6 @@
 {
 	"name": "deployment-delete",
-	"version": "0.1.12",
+	"version": "0.1.13",
 	"private": false,
 	"description": "♻️ Deletes Cloudflare deployments older than 7 days.",
 	"keywords": [
