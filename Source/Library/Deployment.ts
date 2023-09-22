@@ -1,5 +1,6 @@
-import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 import type Environment from "../Library/Environment.js";
+
+import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 
 export type Type = {
 	// rome-ignore lint/suspicious/noExplicitAny:
