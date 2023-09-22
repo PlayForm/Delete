@@ -1,5 +1,15 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 
+export type Type = {
+	// rome-ignore lint/suspicious/noExplicitAny:
+	[key: string]: any;
+
+	result: {
+		id: string;
+		name: string;
+	}[];
+};
+
 /**
  * The function `Project` makes an asynchronous request to the Cloudflare API to fetch a
  * list of projects associated with a given account ID, using the provided headers.
@@ -20,13 +30,5 @@ export default async (ID: string, Header: HeadersInit) =>
 					headers: Header,
 				}
 			)
-		).json()) satisfies {
-			// rome-ignore lint/suspicious/noExplicitAny:
-			[key: string]: any;
-
-			result: {
-				id: string;
-				name: string;
-			}[];
-		}
+		).json()) satisfies Type as Type
 	)?.result;

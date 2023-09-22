@@ -1,6 +1,16 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 import type Environment from "../Library/Environment.js";
 
+export type Type = {
+	// rome-ignore lint/suspicious/noExplicitAny:
+	[key: string]: any;
+
+	result: {
+		created_on: Date;
+		id: string;
+	}[];
+};
+
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
  * information for a specific project.
@@ -25,13 +35,5 @@ export default async (
 					headers: Header,
 				}
 			)
-		).json()) satisfies {
-			// rome-ignore lint/suspicious/noExplicitAny:
-			[key: string]: any;
-
-			result: {
-				created_on: Date;
-				id: string;
-			}[];
-		}
+		).json()) satisfies Type as Type
 	)?.result;
