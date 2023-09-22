@@ -1,5 +1,12 @@
-import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 import type Environment from "../Library/Environment.js";
+import type { HeadersInit } from "@cloudflare/workers-types/experimental";
+export type Type = {
+    [key: string]: any;
+    result: {
+        created_on: Date;
+        id: string;
+    }[];
+};
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
  * information for a specific project.

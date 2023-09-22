@@ -4,8 +4,8 @@ export declare const Fn: Zod.ZodObject<{
     ID: Zod.ZodDefault<Zod.ZodString>;
     Key: Zod.ZodDefault<Zod.ZodString>;
 }, "strip", Zod.ZodTypeAny, {
-    ID: string;
     Email: string;
+    ID: string;
     Key: string;
 }, {
     Email?: string | undefined;

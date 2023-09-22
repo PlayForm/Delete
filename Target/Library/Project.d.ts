@@ -1,4 +1,11 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
+export type Type = {
+    [key: string]: any;
+    result: {
+        id: string;
+        name: string;
+    }[];
+};
 /**
  * The function `Project` makes an asynchronous request to the Cloudflare API to fetch a
  * list of projects associated with a given account ID, using the provided headers.
