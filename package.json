@@ -24,10 +24,10 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
-	"main": "./Target/Delete.js",
-	"types": "./Target/Delete.d.ts",
+	"main": "./Target/Fn/Delete.js",
+	"types": "./Target/Fn/Delete.d.ts",
 	"bin": {
-		"DeploymentDelete": "Target/Bin.js"
+		"DeploymentDelete": "Target/Execution/DeploymentDelete.js"
 	},
 	"scripts": {
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"

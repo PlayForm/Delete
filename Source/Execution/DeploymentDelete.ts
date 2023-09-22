@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import Delete from "./Delete.js";
-import _JSON from "./Library/JSON.js";
+import Delete from "../Fn/Delete.js";
 
 try {
 	new Command()
 		.name("DeploymentDelete")
-		.version((await _JSON("../package.json", import.meta.url))?.version)
+		.version(process.env["VERSION_PACKAGE"] ?? "0.0.1")
 		.description("Deletes old deployments in your Cloudflare account.")
 		.option("-e, --Email <Email>", "Cloudflare Account E-mail.")
 		.option("-i, --ID <ID>", "Cloudflare Account ID.")
@@ -16,6 +15,4 @@ try {
 			console.log(await Delete(Option?.Email, Option?.ID, Option?.Key))
 		)
 		.parse();
-} catch (_Error) {
-	console.log(_Error);
-}
+} catch (_Error) {}

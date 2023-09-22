@@ -1,4 +1,4 @@
-import type Environment from "../Library/Environment.js";
+import type { Type as Environment } from "./Environment.js";
 
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 

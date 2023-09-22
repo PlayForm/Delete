@@ -1,6 +1,6 @@
-import Deployment from "./Library/Deployment.js";
-import { Fn } from "./Library/Environment.js";
-import Project from "./Library/Project.js";
+import Deployment from "./Deployment.js";
+import { Fn } from "./Environment.js";
+import Project from "./Project.js";
 
 const Environment = Fn.parse(process.env);
 
@@ -55,9 +55,7 @@ export default async (
 							headers: Header,
 						}
 					);
-				} catch (_Error) {
-					console.log(_Error);
-				}
+				} catch (_Error) {}
 
 				Deleted.push(id);
 			}
