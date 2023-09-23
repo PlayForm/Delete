@@ -3,7 +3,7 @@ import type { ExecutionContext } from "@cloudflare/workers-types/experimental";
 import Delete from "./Delete.js";
 import Response from "./Response.js";
 
-export interface Env {
+export default interface Env {
 	Email?: string;
 
 	ID?: string;
