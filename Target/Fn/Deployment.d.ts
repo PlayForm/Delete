@@ -1,17 +1,12 @@
 import type Environment from "../Interface/Environment.js";
-
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
-
 export type Type = {
-	// rome-ignore lint/suspicious/noExplicitAny:
-	[key: string]: any;
-
-	result: {
-		created_on: Date;
-		id: string;
-	}[];
+    [key: string]: any;
+    result: {
+        created_on: Date;
+        id: string;
+    }[];
 };
-
 /**
  * The function `Deployment` makes an asynchronous request to the Cloudflare API to retrieve deployment
  * information for a specific project.
@@ -23,18 +18,8 @@ export type Type = {
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-export default async (
-	ID: Environment["ID"],
-	Project: string,
-	Header: HeadersInit
-) =>
-	(
-		(await (
-			await fetch(
-				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments`,
-				{
-					headers: Header,
-				}
-			)
-		).json()) satisfies Type
-	)?.result;
+declare const _default: (ID: Environment["ID"], Project: string, Header: HeadersInit) => Promise<{
+    created_on: Date;
+    id: string;
+}[]>;
+export default _default;

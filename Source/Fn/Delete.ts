@@ -1,12 +1,8 @@
-import Deployment from "./Deployment.js";
-import { Fn } from "./Environment.js";
-import Project from "./Project.js";
-
-const Environment = Fn.parse(process.env);
-
-export const Days = 7;
-
-export const Limit = 500;
+// This is used only once because:
+// 'await' expressions cannot be used in a parameter initializer.ts(2524)
+export const { default: Environment } = await import(
+	"../Object/Environment.js"
+);
 
 /**
  * The Delete function deletes all deployments associated with a specific project ID using the
@@ -19,15 +15,13 @@ export const Limit = 500;
  * account for which the deployments need to be deleted.
  * @returns The function `Delete` returns an array of IDs that have been deleted.
  */
-export default async (
-	Email = Environment.Email,
-	Key = Environment.Key,
-	ID = Environment.ID
-) => {
+
+// @TODO: Find a way to use await in parameters
+export default async ({ Email, Key, ID } = Environment.parse(process.env)) => {
 	const Header = {
 		"content-type": "application/json;charset=UTF-8",
-		"X-Auth-Email": Environment.Email,
-		"X-Auth-Key": Environment.Key,
+		"X-Auth-Email": Email,
+		"X-Auth-Key": Key,
 	};
 
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
@@ -35,17 +29,21 @@ export default async (
 
 	const Deleted = [];
 
-	for (const { name } of (await Project(ID, Header)) ?? []) {
+	for (const { name } of (await (
+		await import("./Project.js")
+	).default(ID, Header)) ?? []) {
 		for (const { id, created_on } of (
 			await (async (Project: string) =>
-				(await Deployment(ID, Project, Header)).splice(0, Limit) ?? [])(
-				name
-			)
+				(
+					await (
+						await import("./Deployment.js")
+					).default(ID, Project, Header)
+				).splice(0, 500) ?? [])(name)
 		).reverse()) {
 			if (
 				// @ts-ignore
 				(Date.now() - new Date(created_on)) / 86400000 >
-				Days
+				7
 			) {
 				try {
 					await fetch(

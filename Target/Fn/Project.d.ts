@@ -1,15 +1,11 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
-
 export type Type = {
-	// rome-ignore lint/suspicious/noExplicitAny:
-	[key: string]: any;
-
-	result: {
-		id: string;
-		name: string;
-	}[];
+    [key: string]: any;
+    result: {
+        id: string;
+        name: string;
+    }[];
 };
-
 /**
  * The function `Project` makes an asynchronous request to the Cloudflare API to fetch a
  * list of projects associated with a given account ID, using the provided headers.
@@ -21,14 +17,8 @@ export type Type = {
  * is a type alias for an object that can be used to initialize a `Headers` object. The
  * headers can include information such as authentication tokens, content
  */
-export default async (ID: string, Header: HeadersInit) =>
-	(
-		(await (
-			await fetch(
-				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects`,
-				{
-					headers: Header,
-				}
-			)
-		).json()) satisfies Type
-	)?.result;
+declare const _default: (ID: string, Header: HeadersInit) => Promise<{
+    id: string;
+    name: string;
+}[]>;
+export default _default;

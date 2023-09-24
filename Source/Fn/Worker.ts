@@ -1,19 +1,18 @@
+import type Environment from "../Interface/Environment.js";
+
 import type { ExecutionContext } from "@cloudflare/workers-types/experimental";
 
-import Delete from "./Delete.js";
-import Response from "./Response.js";
+export const { default: Delete } = await import("./Delete.js");
 
-export default interface Env {
-	Email?: string;
-
-	ID?: string;
-
-	Key?: string;
-}
-
-export default <ExportedHandler<Env>>{
-	fetch: async (_Request: Request, Env: Env, _Context: ExecutionContext) =>
-		await Response(await Delete(Env.Email, Env.ID, Env.Key)),
-	scheduled: async (_Controller, Env, _Context) =>
-		console.log(await Delete(Env.Email, Env.ID, Env.Key)),
+export default <ExportedHandler<Environment>>{
+	fetch: async (
+		_Request: Request,
+		Environment: Environment,
+		_Context: ExecutionContext
+	) =>
+		await (
+			await import("./Response.js")
+		).default(await Delete(Environment)),
+	scheduled: async (_Controller, Environment, _Context) =>
+		console.log(await Delete(Environment)),
 };
