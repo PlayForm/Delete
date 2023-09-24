@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import Delete from "../Fn/Delete.js";
+import Delete from "../Function/Delete.js";
 
 try {
 	new Command()
