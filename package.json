@@ -24,8 +24,8 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
-	"main": "./Target/Fn/Delete.js",
-	"types": "./Target/Fn/Delete.d.ts",
+	"main": "./Target/Function/Delete.js",
+	"types": "./Target/Function/Delete.d.ts",
 	"bin": {
 		"DeploymentDelete": "Target/Execution/DeploymentDelete.js"
 	},
