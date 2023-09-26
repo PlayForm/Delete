@@ -27,7 +27,7 @@
 	"main": "./Target/Function/Delete.js",
 	"types": "./Target/Function/Delete.d.ts",
 	"bin": {
-		"DeploymentDelete": "Target/Execution/DeploymentDelete.js"
+		"DeploymentDelete": "Target/Class/DeploymentDelete.js"
 	},
 	"scripts": {
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
