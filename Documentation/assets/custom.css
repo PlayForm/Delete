@@ -1,7 +1,14 @@
 :root {
-	--color-background: #000;
-	--color-background-secondary: #000;
+	--dark-color-background: #000;
+	--dark-color-background-secondary: #000;
+	--dark-code-background: #040404;
 	--color-accent: #2463eb;
+
+	--dark-hl-0: #ffdd00;
+	--dark-hl-1: #ff66ff;
+	--dark-hl-2: #ff4444;
+	--dark-hl-3: #44ffff;
+	--dark-hl-4: #44ff44;
 }
 
 body #tsd-search .field label {
@@ -30,4 +37,10 @@ body .tsd-navigation summary > span,
 body .tsd-page-navigation a {
 	padding: 0.5rem;
 	border-radius: 8px;
+}
+
+.tsd-signature,
+.tsd-signatures .tsd-signature {
+	border-radius: 12px;
+	border-width: 2px;
 }
