@@ -1,4 +1,16 @@
-export declare const Environment: any;
+export declare const Environment: import("zod").ZodObject<{
+    Email: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
+    ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
+    Key: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
+}, "strip", import("zod").ZodTypeAny, {
+    Email: string;
+    ID: string;
+    Key: string;
+}, {
+    Email?: string | undefined;
+    ID?: string | undefined;
+    Key?: string | undefined;
+}>;
 /**
  * The Delete function deletes all deployments associated with a specific project ID using the
  * Cloudflare API.
@@ -10,5 +22,9 @@ export declare const Environment: any;
  * account for which the deployments need to be deleted.
  * @returns The function `Delete` returns an array of IDs that have been deleted.
  */
-declare const _default: ({ Email, Key, ID }?: any) => Promise<string[]>;
+declare const _default: ({ Email, Key, ID }?: {
+    Email: string;
+    ID: string;
+    Key: string;
+}) => Promise<string[]>;
 export default _default;
