@@ -18,8 +18,5 @@ export type Type = {
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-declare const _default: (ID: Environment["ID"], Project: string, Header: HeadersInit) => Promise<{
-    created_on: Date;
-    id: string;
-}[]>;
+declare const _default: (ID: Environment["ID"], Project: string, Header: HeadersInit) => Promise<any>;
 export default _default;

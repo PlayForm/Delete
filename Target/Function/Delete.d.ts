@@ -26,5 +26,5 @@ declare const _default: ({ Email, Key, ID }?: {
     Email: string;
     ID: string;
     Key: string;
-}) => Promise<string[]>;
+}) => Promise<any[]>;
 export default _default;

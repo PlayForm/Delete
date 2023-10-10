@@ -17,8 +17,5 @@ export type Type = {
  * is a type alias for an object that can be used to initialize a `Headers` object. The
  * headers can include information such as authentication tokens, content
  */
-declare const _default: (ID: string, Header: HeadersInit) => Promise<{
-    id: string;
-    name: string;
-}[]>;
+declare const _default: (ID: string, Header: HeadersInit) => Promise<any>;
 export default _default;

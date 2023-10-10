@@ -3,7 +3,7 @@ export declare const Delete: ({ Email, Key, ID }?: {
     Email: string;
     ID: string;
     Key: string;
-}) => Promise<string[]>;
+}) => Promise<any[]>;
 declare const _default: ExportedHandler<{
     Email: string;
     ID: string;
