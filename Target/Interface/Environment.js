@@ -1,1 +1,1 @@
-const{default:e}=await import("../Object/Environment.js");
+const{default:e}=await import("../Variable/Environment.js");

@@ -18,4 +18,3 @@ try {
 		.parse();
 } catch (_Error) {}
 
-export {};
