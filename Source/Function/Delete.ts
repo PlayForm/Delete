@@ -1,7 +1,7 @@
 // This is used only once because:
 // 'await' expressions cannot be used in a parameter initializer.ts(2524)
 export const { default: Environment } = await import(
-	"../Object/Environment.js"
+	"../Variable/Environment.js"
 );
 
 /**
