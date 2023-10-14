@@ -3,7 +3,7 @@ import type Environment from "../Interface/Environment.js";
 import type { HeadersInit } from "@cloudflare/workers-types/experimental";
 
 export type Type = {
-	// rome-ignore lint/suspicious/noExplicitAny:
+	// biome-ignore lint/suspicious/noExplicitAny:
 	[key: string]: any;
 
 	result: {
