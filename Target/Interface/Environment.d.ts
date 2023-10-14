@@ -1,8 +1,8 @@
-declare const Environment: import("zod").ZodObject<{
-    Email: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    Key: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-}, "strip", import("zod").ZodTypeAny, {
+declare const Environment: Zod.ZodObject<{
+    Email: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    ID: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    Key: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+}, "strip", Zod.ZodTypeAny, {
     Email: string;
     ID: string;
     Key: string;
@@ -13,3 +13,4 @@ declare const Environment: import("zod").ZodObject<{
 }>;
 export type Type = Zod.infer<typeof Environment>;
 export type { Type as default };
+import type Zod from "zod";
