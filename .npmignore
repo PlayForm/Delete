@@ -1,5 +1,6 @@
 .github/
-.turbo/
+Source/
+Documentation/
 .dev.vars
 .env
 .dev.vars.example
@@ -8,6 +9,4 @@ wrangler.toml
 CHANGELOG.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-Source/
 *.sh
-Documentation/
