@@ -1,6 +1,6 @@
 import type Environment from "../Interface/Environment.js";
 
-import type { HeadersInit } from "@cloudflare/workers-types/experimental";
+import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
 
 export type Type = {
 	// biome-ignore lint/suspicious/noExplicitAny:
