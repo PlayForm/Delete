@@ -30,5 +30,5 @@ export default async (ID: string, Header: HeadersInit) =>
 					headers: Header,
 				}
 			)
-		).json()) satisfies Type
+		).json()) as Type
 	)?.result;
