@@ -16,8 +16,6 @@ export default interface Type {
 	 * @param ID - The ID parameter represents the ID of the Cloudflare account. It is used to identify the
 	 * account for which the deployments need to be deleted.
 	 *
-	 * @returns The function `Delete` returns an array of IDs that have been deleted.
-	 *
 	 */
 	// biome-ignore lint/suspicious/noExplicitAny:
 	({ Email, Key, ID }: Environment): Promise<any[]>;
