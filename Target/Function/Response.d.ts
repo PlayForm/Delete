@@ -6,12 +6,5 @@
  * @param [Status=200] - The `Status` parameter is an optional parameter that specifies the HTTP status
  * code of the response. If no value is provided, it defaults to 200 (OK).
  */
-export default (async (Message: unknown = null, Status = 200) =>
-	new Response(JSON.stringify(Message), {
-		status: Status,
-		headers: {
-			"Content-Type": "application/json;charset=utf-8",
-		},
-	})) satisfies Type as Type;
-
-import type Type from "../Interface/Response.js";
+declare const _default: Type;
+export default _default;

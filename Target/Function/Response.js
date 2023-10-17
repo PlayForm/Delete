@@ -1,1 +1,1 @@
-var t=async(n=null,e=200)=>new Response(JSON.stringify(n),{status:e,headers:{"Content-Type":"application/json;charset=utf-8"}});export{t as default};
+var n=async(e=null,s=200)=>new Response(JSON.stringify(e),{status:s,headers:{"Content-Type":"application/json;charset=utf-8"}});export{n as default};
