@@ -1,4 +1,3 @@
-import type Environment from "../Interface/Environment.js";
 import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
 export type Type = {
     [key: string]: any;
@@ -18,5 +17,5 @@ export type Type = {
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-declare const _default: (ID: Environment["ID"], Project: string, Header: HeadersInit) => Promise<any>;
+declare const _default: (ID: Environment, Project: string, Header: HeadersInit) => Promise<any>;
 export default _default;
