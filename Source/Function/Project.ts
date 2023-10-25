@@ -2,8 +2,6 @@ import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.j
 
 export type Type = {
 	// biome-ignore lint/suspicious/noExplicitAny:
-	[key: string]: any;
-
 	result: {
 		id: string;
 		name: string;
