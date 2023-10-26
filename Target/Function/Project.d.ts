@@ -1,6 +1,5 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
 export type Type = {
-    [key: string]: any;
     result: {
         id: string;
         name: string;
