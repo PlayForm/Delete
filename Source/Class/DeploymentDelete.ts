@@ -10,10 +10,12 @@ try {
 		.option("-k, --Key <Key>", "Cloudflare API key.")
 		.action(async ({ Email, ID, Key }) =>
 			console.log(
-				await (
-					await import("../Function/Delete.js")
-				).default({ Email, ID, Key })
-			)
+				await (await import("../Function/Delete.js")).default({
+					Email,
+					ID,
+					Key,
+				}),
+			),
 		)
 		.parse();
 } catch (_Error) {}
