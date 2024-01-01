@@ -3,7 +3,7 @@
  *
  */
 // @TODO: Find a way to use await in parameters
-export default ((async (
+export default (async (
 	...[{ Email, ID, Key } = Environment.parse(process.env)]: Parameters<Type>
 ) => {
 	const Header = {
@@ -39,7 +39,7 @@ export default ((async (
 						{
 							method: "DELETE",
 							headers: Header,
-						},
+						}
 					);
 				} catch (_Error) {}
 
@@ -49,7 +49,7 @@ export default ((async (
 	}
 
 	return Deleted;
-}) satisfies Type as Type);
+}) satisfies Type as Type;
 
 // This is used only once because:
 // 'await' expressions cannot be used in a parameter initializer.ts(2524)

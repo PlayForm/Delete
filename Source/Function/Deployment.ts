@@ -24,7 +24,7 @@ export type Type = {
 export default async (
 	ID: Environment["ID"],
 	Project: string,
-	Header: HeadersInit,
+	Header: HeadersInit
 ) =>
 	(
 		(await (
@@ -32,7 +32,7 @@ export default async (
 				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments`,
 				{
 					headers: Header,
-				},
+				}
 			)
 		).json()) satisfies Type
 	)?.result;
