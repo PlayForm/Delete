@@ -37,7 +37,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20231218.0",
+		"@cloudflare/workers-types": "4.20240117.0",
 		"@types/node": "20.11.4",
 		"typescript-esbuild": "0.3.6"
 	},
