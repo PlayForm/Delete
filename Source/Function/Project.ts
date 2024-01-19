@@ -26,7 +26,7 @@ export default async (ID: string, Header: HeadersInit) =>
 				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects`,
 				{
 					headers: Header,
-				}
+				},
 			)
 		).json()) as Type
 	)?.result;
