@@ -41,7 +41,9 @@ export default (async (
 							headers: Header,
 						},
 					);
-				} catch (_Error) {}
+				} catch (_Error) {
+					console.log(_Error);
+				}
 
 				Deleted.push(id);
 			}

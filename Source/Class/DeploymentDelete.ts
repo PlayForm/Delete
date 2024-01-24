@@ -18,4 +18,6 @@ try {
 			),
 		)
 		.parse();
-} catch (_Error) {}
+} catch (_Error) {
+	console.log(_Error);
+}
