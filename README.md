@@ -44,9 +44,7 @@ wrangler deploy
 **`Source/Index.ts`**
 
 ```ts
-import Delete from "deployment-delete";
-
-await Delete(Email, ID, Key);
+await(await import("deployment-delete"))(Email, ID, Key);
 ```
 
 **`.env`**
