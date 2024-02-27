@@ -1,4 +1,4 @@
-# [DeploymentDelete] ♻️
+# ♻️ [DeploymentDelete]
 
 Deletes any Cloudflare deployment older than 7 days. \
 https://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
