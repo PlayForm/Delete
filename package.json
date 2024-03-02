@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240222.0",
-		"@types/node": "20.11.21",
+		"@types/node": "20.11.24",
 		"typescript-esbuild": "0.3.10"
 	},
 	"publishConfig": {
