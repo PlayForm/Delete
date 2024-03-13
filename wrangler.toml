@@ -1,4 +1,4 @@
-name = "deployment-delete"
+name = "delete-deployment"
 main = "./Target/Worker.js"
 compatibility_date = "2023-05-18"
 node_compat = true

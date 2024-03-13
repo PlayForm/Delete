@@ -1,6 +1,6 @@
 {
-	"name": "deployment-delete",
-	"version": "0.1.14",
+	"name": "delete-deployment",
+	"version": "0.0.1",
 	"private": false,
 	"description": "♻️ Deletes any Cloudflare deployment older than 7 days.",
 	"keywords": [
@@ -9,13 +9,13 @@
 		"deployment",
 		"worker"
 	],
-	"homepage": "https://github.com/NikolaRHristov/DeploymentDelete#readme",
+	"homepage": "https://github.com/Playform/DeploymentDelete#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/DeploymentDelete/issues"
+		"url": "https://github.com/Playform/DeploymentDelete/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/DeploymentDelete.git"
+		"url": "git+https://github.com/Playform/DeploymentDelete.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
