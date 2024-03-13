@@ -2,7 +2,7 @@
 
 try {
 	new (await import("commander")).Command()
-		.name("DeploymentDelete")
+		.name("DeleteDeployment")
 		.version(process.env["VERSION_PACKAGE"] ?? "0.0.1")
 		.description("Deletes old deployments in your Cloudflare account.")
 		.option("-e, --Email <Email>", "Cloudflare Account E-mail.")

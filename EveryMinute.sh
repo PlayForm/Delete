@@ -1,6 +1,6 @@
 #!/bin/bash
 
 while true; do
-	./DeploymentDelete.sh
+	./DeleteDeployment.sh
 	sleep 60
 done
