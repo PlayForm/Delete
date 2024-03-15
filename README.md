@@ -1,6 +1,6 @@
 # ♻️ [DeleteDeployment]
 
-Deletes any Cloudflare deployment older than 7 days. \
+Delete stale Cloudflare Pages deployment. \
 https://developers.cloudflare.com/api/operations/pages-delete-deployment-deployment
 
 ## Installation
