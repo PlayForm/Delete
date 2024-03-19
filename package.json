@@ -3,7 +3,12 @@
 	"version": "0.0.1",
 	"private": false,
 	"description": "♻️ Delete Deployment.",
-	"keywords": ["cloudflare", "delete", "deployment", "worker"],
+	"keywords": [
+		"cloudflare",
+		"delete",
+		"deployment",
+		"worker"
+	],
 	"homepage": "https://github.com/Playform/DeleteDeployment#readme",
 	"bugs": {
 		"url": "https://github.com/Playform/DeleteDeployment/issues"
@@ -25,6 +30,7 @@
 		"DeleteDeployment": "Target/Class/DeleteDeployment.js"
 	},
 	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -34,6 +40,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240314.0",
 		"@types/node": "20.11.28",
+		"typescript-document": "0.0.2",
 		"typescript-esbuild": "0.4.3"
 	},
 	"publishConfig": {
