@@ -24,8 +24,8 @@
 		"url": "https://playform.cloud"
 	},
 	"type": "module",
-	"main": "./Target/Function/Delete.js",
-	"types": "./Target/Function/Delete.d.ts",
+	"main": "./Target/Function/DeleteDeployment.js",
+	"types": "./Target/Function/DeleteDeployment.d.ts",
 	"bin": {
 		"DeleteDeployment": "Target/Class/DeleteDeployment.js"
 	},
