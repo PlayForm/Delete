@@ -59,4 +59,4 @@ Key="accountKey"
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[DeleteDeployment]: https://npmjs.org/delete-deployment
+[DeleteDeployment]: HTTPS://NPMJS.Org/delete-deployment
