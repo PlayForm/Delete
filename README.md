@@ -37,7 +37,7 @@ You can also publish it as a worker:
 wrangler deploy
 ```
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=HTTPS://GitHub.Com/Playform/DeleteDeployment)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Playform/DeleteDeployment)
 
 ## Script
 
@@ -59,4 +59,4 @@ Key="accountKey"
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[DeleteDeployment]: HTTPS://NPMJS.Org/delete-deployment
+[DeleteDeployment]: https://NPMJS.Org/delete-deployment
