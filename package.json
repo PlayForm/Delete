@@ -35,7 +35,7 @@
 	"devDependencies": {
 		"@types/node": "20.11.30",
 		"typescript-document": "0.0.6",
-		"typescript-esbuild": "0.4.7",
+		"typescript-esbuild": "0.4.8",
 		"@cloudflare/workers-types": "4.20240320.1"
 	},
 	"publishConfig": {
