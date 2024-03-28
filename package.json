@@ -15,7 +15,7 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Playform",
-		"email": "Hello@Playform.Cloud",
+		"email": "hello@playform.cloud",
 		"url": "https://playform.cloud"
 	},
 	"type": "module",
@@ -34,8 +34,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "20.11.30",
-		"typescript-document": "0.0.6",
-		"typescript-esbuild": "0.4.8",
+		"typescript-document": "0.0.7",
+		"typescript-esbuild": "0.4.9",
 		"@cloudflare/workers-types": "4.20240320.1"
 	},
 	"publishConfig": {
