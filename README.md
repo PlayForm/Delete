@@ -1,12 +1,12 @@
 # ♻️ [DeleteDeployment]
 
 Delete stale Cloudflare Pages deployment. \
-https://developers.cloudflare.com/api/operations/pages-delete-deployment-deployment
+https://developers.cloudflare.com/api/operations/pages-@playform/delete-deployment
 
 ## Installation
 
 ```sh
-npm install -g delete-deployment
+npm install -g @playform/delete
 ```
 
 ## CLI Usage
@@ -44,7 +44,7 @@ wrangler deploy
 **`Source/Index.ts`**
 
 ```ts
-await(await import("delete-deployment"))(Email, ID, Key);
+await(await import("@playform/delete"))(Email, ID, Key);
 ```
 
 **`.env`**
@@ -59,4 +59,4 @@ Key="accountKey"
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[DeleteDeployment]: https://npmjs.org/delete-deployment
+[DeleteDeployment]: https://npmjs.org/@playform/delete
