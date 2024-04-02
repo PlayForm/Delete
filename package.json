@@ -3,7 +3,12 @@
 	"version": "0.0.1",
 	"private": false,
 	"description": "♻️ Delete Deployment.",
-	"keywords": ["cloudflare", "delete", "deployment", "worker"],
+	"keywords": [
+		"cloudflare",
+		"delete",
+		"deployment",
+		"worker"
+	],
 	"homepage": "https://github.com/Playform/DeleteDeployment#ReadMe",
 	"bugs": {
 		"url": "https://github.com/Playform/DeleteDeployment/issues"
@@ -33,9 +38,9 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@types/node": "20.12.2",
+		"@cloudflare/workers-types": "4.20240329.0",
 		"@playform/build": "0.0.1",
-		"@cloudflare/workers-types": "4.20240329.0"
+		"@types/node": "20.12.2"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.2"
