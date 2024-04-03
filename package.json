@@ -30,8 +30,8 @@
 		"DeleteDeployment": "Target/Class/DeleteDeployment.js"
 	},
 	"scripts": {
-		"Document": "TypeScriptDocument 'Source/**/*.ts'",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
+		"Document": "Document 'Source/**/*.ts'",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"dotenv": "16.4.5",
@@ -39,7 +39,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240329.0",
-		"@playform/build": "0.0.1",
+		"@playform/build": "0.0.2",
 		"@types/node": "20.12.2"
 	},
 	"optionalDependencies": {
