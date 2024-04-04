@@ -31,16 +31,16 @@
 	},
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
-		"Build": "Build 'Source/**/*.ts'"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"dotenv": "16.4.5",
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20240329.0",
+		"@cloudflare/workers-types": "4.20240403.0",
 		"@playform/build": "0.0.2",
-		"@types/node": "20.12.2"
+		"@types/node": "20.12.4"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.3"
