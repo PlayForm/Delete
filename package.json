@@ -40,7 +40,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240402.0",
 		"@playform/build": "0.0.1",
-		"@types/node": "20.12.3"
+		"@types/node": "20.12.4"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.2"
