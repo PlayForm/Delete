@@ -43,7 +43,7 @@
 		"@types/node": "20.12.3"
 	},
 	"optionalDependencies": {
-		"@playform/document": "0.0.2"
+		"@playform/document": "0.0.3"
 	},
 	"publishConfig": {
 		"access": "public"
