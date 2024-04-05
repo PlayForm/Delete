@@ -11,8 +11,8 @@ declare const Environment: Zod.ZodObject<{
     Key: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
 }, "strip", Zod.ZodTypeAny, {
     Email: string;
-    Key: string;
     ID: string;
+    Key: string;
 }, {
     Email?: string | undefined;
     ID?: string | undefined;

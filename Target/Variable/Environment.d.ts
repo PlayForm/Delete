@@ -12,8 +12,8 @@ declare const _default: import("zod").ZodObject<{
     Key: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
 }, "strip", import("zod").ZodTypeAny, {
     Email: string;
-    Key: string;
     ID: string;
+    Key: string;
 }, {
     Email?: string | undefined;
     ID?: string | undefined;

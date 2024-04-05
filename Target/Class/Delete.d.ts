@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @module DeleteDeployment
+ * @module Delete
  *
  */
 declare const _default: import("commander").Command;

@@ -1,4 +1,3 @@
-import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
 export type Type = {
     result: {
         created_on: Date;
@@ -16,5 +15,10 @@ export type Type = {
  * included in the HTTP request. It should be of type `HeadersInit`, which is a type alias for `Headers
  * | string[][] | Record<string, string>`.
  */
-declare const _default: (ID: Environment, Project: string, Header: HeadersInit) => Promise<any>;
+declare const _default: (ID: Environment["ID"], Project: string, Header: HeadersInit) => Promise<{
+    created_on: Date;
+    id: string;
+}[]>;
 export default _default;
+import type Environment from "@Type/Environment.js";
+import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";

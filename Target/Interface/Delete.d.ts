@@ -2,7 +2,7 @@
  * @module Delete
  *
  */
-export default interface Type {
+export default interface Interface {
     /**
      * The Delete function deletes all deployments associated with a specific project ID using the
      * Cloudflare API.
@@ -19,4 +19,4 @@ export default interface Type {
      */
     ({ Email, Key, ID }: Environment): Promise<any[]>;
 }
-import type Environment from "./Environment.js";
+import type Environment from "@Type/Environment.js";

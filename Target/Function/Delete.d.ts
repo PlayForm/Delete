@@ -10,11 +10,11 @@ export declare const Environment: import("zod").ZodObject<{
     Key: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
 }, "strip", import("zod").ZodTypeAny, {
     Email: string;
-    Key: string;
     ID: string;
+    Key: string;
 }, {
     Email?: string | undefined;
     ID?: string | undefined;
     Key?: string | undefined;
 }>;
-import type Type from "../Interface/Delete.js";
+import type Type from "@Interface/Delete.js";

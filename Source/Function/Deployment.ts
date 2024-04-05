@@ -1,7 +1,3 @@
-import type Environment from "@Interface/Environment.js";
-
-import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
-
 export type Type = {
 	// biome-ignore lint/suspicious/noExplicitAny:
 	result: {
@@ -24,15 +20,21 @@ export type Type = {
 export default async (
 	ID: Environment["ID"],
 	Project: string,
-	Header: HeadersInit,
+	Header: HeadersInit
 ) =>
 	(
 		(await (
-			await fetch(
+			await (
+				await import("@cloudflare/workers-types/experimental/index.js")
+			).fetch(
 				`https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments`,
 				{
 					headers: Header,
-				},
+				}
 			)
 		).json()) satisfies Type
 	)?.result;
+
+import type Environment from "@Type/Environment.js";
+
+import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
