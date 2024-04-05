@@ -14,7 +14,7 @@ export default new (await import("commander")).Command()
 	.action(async ({ Email, ID, Key }) =>
 		console.log(
 			await (
-				await import("../Function/Delete.js")
+				await import("@Function/Delete.js")
 			).default({
 				Email,
 				ID,

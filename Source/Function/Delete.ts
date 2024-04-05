@@ -15,16 +15,16 @@ export default (async (
 	Header["X-Auth-Email"] = Email ?? Header["X-Auth-Email"];
 	Header["X-Auth-Key"] = Key ?? Header["X-Auth-Key"];
 
-	const Deleted = [];
+	const Deleted: string[] = [];
 
 	for (const { name } of (await (
-		await import("./Project.js")
+		await import("@Function/Project.js")
 	).default(ID, Header)) ?? []) {
 		for (const { id, created_on } of (
 			await (async (Project: string) =>
 				(
 					await (
-						await import("./Deployment.js")
+						await import("@Function/Deployment.js")
 					).default(ID, Project, Header)
 				).splice(0, 500) ?? [])(name)
 		).reverse()) {
@@ -39,7 +39,7 @@ export default (async (
 						{
 							method: "DELETE",
 							headers: Header,
-						},
+						}
 					);
 				} catch (_Error) {
 					console.log(_Error);
@@ -56,7 +56,7 @@ export default (async (
 // This is used only once because:
 // 'await' expressions cannot be used in a parameter initializer.ts(2524)
 export const { default: Environment } = await import(
-	"../Variable/Environment.js"
+	"@Variable/Environment.js"
 );
 
-import type Type from "../Interface/Delete.js";
+import type Type from "@Interface/Delete.js";

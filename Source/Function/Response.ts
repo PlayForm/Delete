@@ -14,4 +14,4 @@ export default (async (Message: unknown = null, Status = 200) =>
 		},
 	})) satisfies Type as Type;
 
-import type Type from "../Interface/Response.js";
+import type Type from "@Interface/Response.js";
