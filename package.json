@@ -2,20 +2,20 @@
 	"name": "@playform/delete",
 	"version": "0.0.1",
 	"private": false,
-	"description": "♻️ Delete Deployment.",
+	"description": "♻️ Delete.",
 	"keywords": [
 		"cloudflare",
 		"delete",
 		"deployment",
 		"worker"
 	],
-	"homepage": "https://github.com/Playform/DeleteDeployment#ReadMe",
+	"homepage": "https://github.com/Playform/Delete#ReadMe",
 	"bugs": {
-		"url": "https://github.com/Playform/DeleteDeployment/issues"
+		"url": "https://github.com/Playform/Delete/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/DeleteDeployment.git"
+		"url": "git+https://github.com/Playform/Delete.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
@@ -24,12 +24,13 @@
 		"url": "https://playform.cloud"
 	},
 	"type": "module",
-	"main": "./Target/Function/DeleteDeployment.js",
-	"types": "./Target/Function/DeleteDeployment.d.ts",
+	"main": "./Target/Function/Delete.js",
+	"types": "./Target/Function/Delete.d.ts",
 	"bin": {
-		"DeleteDeployment": "Target/Class/DeleteDeployment.js"
+		"Delete": "Target/Class/Delete.js"
 	},
 	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -37,8 +38,9 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20240403.0",
+		"@cloudflare/workers-types": "4.20240404.0",
 		"@playform/build": "0.0.5",
+		"@playform/document": "0.0.6",
 		"@types/node": "20.12.4"
 	},
 	"publishConfig": {
