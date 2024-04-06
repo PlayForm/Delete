@@ -49,7 +49,7 @@ await(await import("@playform/delete"))(Email, ID, Key);
 
 **`.env`**
 
-```env
+```sh
 Email="example@account.com"
 ID="accountId"
 Key="accountKey"
