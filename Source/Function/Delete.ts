@@ -4,7 +4,9 @@
  */
 // @TODO: Find a way to use await in parameters
 export default (async (
-	...[{ Email, ID, Key } = Environment.parse(process.env)]: Parameters<Type>
+	...[
+		{ Email, ID, Key } = Environment.parse(process.env),
+	]: Parameters<Interface>
 ) => {
 	const Header = {
 		"content-type": "application/json;charset=UTF-8",
@@ -51,7 +53,7 @@ export default (async (
 	}
 
 	return Deleted;
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
 // This is used only once because:
 // 'await' expressions cannot be used in a parameter initializer.ts(2524)
@@ -59,4 +61,4 @@ export const { default: Environment } = await import(
 	"@Variable/Environment.js"
 );
 
-import type Type from "@Interface/Delete.js";
+import type Interface from "@Interface/Delete.js";

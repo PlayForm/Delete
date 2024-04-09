@@ -12,6 +12,6 @@ export default (async (Message: unknown = null, Status = 200) =>
 		headers: {
 			"Content-Type": "application/json;charset=utf-8",
 		},
-	})) satisfies Type as Type;
+	})) satisfies Interface as Interface;
 
-import type Type from "@Interface/Response.js";
+import type Interface from "@Interface/Response.js";
