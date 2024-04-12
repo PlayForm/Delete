@@ -7,7 +7,7 @@
 export default new (await import("commander")).Command()
 	.name("Delete")
 	.version(process.env["VERSION_PACKAGE"] ?? "0.0.1")
-	.description("♻️ Delete.")
+	.description("♻️ Delete")
 	.option("-e, --Email <Email>", "Email.")
 	.option("-i, --ID <ID>", "ID.")
 	.option("-k, --Key <Key>", "Key.")
