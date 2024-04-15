@@ -2,7 +2,7 @@
 	"name": "@playform/delete",
 	"version": "0.0.1",
 	"private": false,
-	"description": "♻️ Delete",
+	"description": "♻️ Delete.",
 	"keywords": [
 		"cloudflare",
 		"delete",
