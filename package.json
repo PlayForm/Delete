@@ -2,7 +2,7 @@
 	"name": "@playform/delete",
 	"version": "0.0.1",
 	"private": false,
-	"description": "♻️ Delete.",
+	"description": "♻️ Delete —",
 	"keywords": [
 		"cloudflare",
 		"delete",
@@ -35,10 +35,10 @@
 	},
 	"dependencies": {
 		"dotenv": "16.4.5",
-		"zod": "3.22.5"
+		"zod": "3.23.3"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20240405.0",
+		"@cloudflare/workers-types": "4.20240419.0",
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
 		"@types/node": "20.12.7"
