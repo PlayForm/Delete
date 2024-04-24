@@ -10,19 +10,19 @@
 		"worker",
 		"playform"
 	],
-	"homepage": "HTTPS://GitHub.Com/Playform/Delete#readme",
+	"homepage": "HTTPS://GitHub.Com/PlayForm/Delete#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/Playform/Delete/issues"
+		"url": "HTTPS://GitHub.Com/PlayForm/Delete/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/Playform/Delete.git"
+		"url": "git+HTTPS://github.com/PlayForm/Delete.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "⛲ Source ⁄ 🚪 Open —",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Function/Delete.js",
