@@ -2,7 +2,7 @@
 	"name": "@playform/delete",
 	"version": "0.0.1",
 	"private": false,
-	"description": "♻️ Delete —",
+	"description": "♻️ — Delete —",
 	"keywords": [
 		"cloudflare",
 		"delete",
@@ -20,7 +20,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "⛲ Source ⁄ 🚪 Open —",
+		"name": "⛲ Source ⁄ 🚪 — Open —",
 		"email": "Source/Open@PlayForm.Cloud",
 		"url": "HTTPS://PlayForm.Cloud"
 	},
