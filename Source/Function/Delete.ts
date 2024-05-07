@@ -61,4 +61,4 @@ export const { default: Environment } = await import(
 	"@Variable/Environment.js"
 );
 
-import type Interface from "@Interface/Delete.js";
+import type Interface from "../Interface/Delete.js";

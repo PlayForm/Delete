@@ -1,6 +1,6 @@
-import type Environment from "@Type/Environment.js";
+import type Environment from "../Type/Environment.js";
 
-import type { ExecutionContext } from "@cloudflare/workers-types/experimental/index.js";
+import type { ExecutionContext, ExportedHandler } from "@cloudflare/workers-types/experimental/index.js";
 
 export const { default: Delete } = await import("@Function/Delete.js");
 

@@ -21,4 +21,4 @@ export default interface Interface {
 	({ Email, Key, ID }: Environment): Promise<any[]>;
 }
 
-import type Environment from "@Type/Environment.js";
+import type Environment from "../Type/Environment.js";

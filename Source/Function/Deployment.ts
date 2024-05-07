@@ -35,6 +35,6 @@ export default async (
 		).json()) satisfies Type
 	)?.result;
 
-import type Environment from "@Type/Environment.js";
+import type Environment from "../Type/Environment.js";
 
 import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
