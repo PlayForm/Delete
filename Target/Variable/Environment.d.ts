@@ -2,6 +2,7 @@ export declare const string: (params?: ({
     errorMap?: import("zod").ZodErrorMap | undefined;
     invalid_type_error?: string | undefined;
     required_error?: string | undefined;
+    message?: string | undefined;
     description?: string | undefined;
 } & {
     coerce?: true | undefined;

@@ -2,5 +2,4 @@
  * @module Environment
  *
  */
-export default interface Interface {
-}
+export default type;

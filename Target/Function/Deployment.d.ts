@@ -20,5 +20,5 @@ declare const _default: (ID: Environment["ID"], Project: string, Header: Headers
     id: string;
 }[]>;
 export default _default;
-import type Environment from "@Type/Environment.js";
+import type Environment from "../Type/Environment.js";
 import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";

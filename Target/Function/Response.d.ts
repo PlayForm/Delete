@@ -6,6 +6,6 @@
  * @param [Status=200] - The `Status` parameter is an optional parameter that specifies the HTTP status
  * code of the response. If no value is provided, it defaults to 200 (OK).
  */
-declare const _default: Type;
+declare const _default: Interface;
 export default _default;
-import type Type from "@Interface/Response.js";
+import type Interface from "../Interface/Response.js";

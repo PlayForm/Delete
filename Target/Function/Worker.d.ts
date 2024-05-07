@@ -1,5 +1,5 @@
-/// <reference types="@cloudflare/workers-types/experimental" />
-export declare const Delete: import("../Interface/Delete").default;
+import type { ExportedHandler } from "@cloudflare/workers-types/experimental/index.js";
+export declare const Delete: import("../Interface/Delete.js").default;
 declare const _default: ExportedHandler<{
     Email: string;
     ID: string;

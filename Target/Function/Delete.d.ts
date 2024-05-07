@@ -2,7 +2,7 @@
  * @module Delete
  *
  */
-declare const _default: Type;
+declare const _default: Interface;
 export default _default;
 export declare const Environment: import("zod").ZodObject<{
     Email: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
@@ -17,4 +17,4 @@ export declare const Environment: import("zod").ZodObject<{
     ID?: string | undefined;
     Key?: string | undefined;
 }>;
-import type Type from "@Interface/Delete.js";
+import type Interface from "../Interface/Delete.js";
