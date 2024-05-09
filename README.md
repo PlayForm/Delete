@@ -59,4 +59,4 @@ Key="accountKey"
 
 See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this utility.
 
-[DeleteDeployment]: HTTPS://npmjs.org/@playform/delete
+[DeleteDeployment]: HTTPS://NPMJS.Org/@playform/delete
