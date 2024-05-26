@@ -7,15 +7,15 @@ import type {
 
 export const { default: Delete } = await import("@Function/Delete.js");
 
-export default <ExportedHandler<Environment>>{
+export default (<ExportedHandler<Environment>>{
 	fetch: async (
 		_Request: Request,
 		Environment: Environment,
-		_Context: ExecutionContext
+		_Context: ExecutionContext,
 	) =>
-		await (
-			await import("@Function/Response.js")
-		).default(await Delete(Environment)),
+		await (await import("@Function/Response.js")).default(
+			await Delete(Environment),
+		),
 	scheduled: async (_Controller, Environment, _Context) =>
 		console.log(await Delete(Environment)),
-};
+});

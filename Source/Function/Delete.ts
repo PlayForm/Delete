@@ -41,7 +41,7 @@ export default (async (
 						{
 							method: "DELETE",
 							headers: Header,
-						}
+						},
 					);
 				} catch (_Error) {
 					console.log(_Error);

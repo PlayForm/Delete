@@ -13,13 +13,11 @@ export default new (await import("commander")).Command()
 	.option("-k, --Key <Key>", "Key.")
 	.action(async ({ Email, ID, Key }) =>
 		console.log(
-			await (
-				await import("@Function/Delete.js")
-			).default({
+			await (await import("@Function/Delete.js")).default({
 				Email,
 				ID,
 				Key,
-			})
-		)
+			}),
+		),
 	)
 	.parse();
