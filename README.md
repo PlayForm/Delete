@@ -41,7 +41,7 @@ wrangler deploy
 
 ## Script
 
-**`Source/Index.ts`**
+**`Source/Main.ts`**
 
 ```ts
 await(await import("@playform/delete"))(Email, ID, Key);
