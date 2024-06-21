@@ -41,7 +41,7 @@
 		"@cloudflare/workers-types": "4.20240614.0",
 		"@playform/build": "0.0.11",
 		"@playform/document": "0.0.11",
-		"@types/node": "20.14.5"
+		"@types/node": "20.14.7"
 	},
 	"publishConfig": {
 		"access": "public"
