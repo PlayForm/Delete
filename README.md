@@ -1,7 +1,7 @@
 # ♻️ [DeleteDeployment]
 
 Delete stale Cloudflare Pages deployment. \
-https://developers.cloudflare.com/api/operations/pages-@playform/delete-deployment
+https://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
 
 ## Installation
 
