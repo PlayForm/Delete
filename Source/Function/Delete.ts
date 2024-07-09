@@ -2,7 +2,7 @@
  * @module Delete
  *
  */
-// @TODO: Find a way to use await in parameters
+// TODO: Find a way to use await in parameters
 export default (async (
 	...[
 		{ Email, ID, Key } = Environment.parse(process.env),
