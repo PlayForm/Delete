@@ -41,7 +41,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240821.1",
 		"@playform/build": "0.1.4",
-		"@types/node": "22.5.2"
+		"@types/node": "22.5.3"
 	},
 	"publishConfig": {
 		"access": "public",
