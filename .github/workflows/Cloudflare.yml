@@ -53,7 +53,7 @@ jobs:
             VCPKG_DISABLE_METRICS: 1
 
         steps:
-            - uses: actions/checkout@v4.1.7
+            - uses: actions/checkout@v4.2.0
 
             - uses: cloudflare/wrangler-action@v3.7.0
               with:
