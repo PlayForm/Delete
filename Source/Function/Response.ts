@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Response.js";
+
 /**
  * The function `Response` is an asynchronous function that returns a response object with a JSON
  * stringified message and a specified status code.
@@ -13,5 +15,3 @@ export default (async (Message: unknown = null, Status = 200) =>
 			"Content-Type": "application/json;charset=utf-8",
 		},
 	})) satisfies Interface as Interface;
-
-import type Interface from "../Interface/Response.js";

@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Delete.js";
+
 /**
  * @module Delete
  *
@@ -60,5 +62,3 @@ export default (async (
 export const { default: Environment } = await import(
 	"@Variable/Environment.js"
 );
-
-import type Interface from "../Interface/Delete.js";

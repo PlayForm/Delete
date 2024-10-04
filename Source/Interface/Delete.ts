@@ -1,3 +1,5 @@
+import type Environment from "../Type/Environment.js";
+
 /**
  * @module Delete
  *
@@ -20,5 +22,3 @@ export default interface Interface {
 	// biome-ignore lint/suspicious/noExplicitAny:
 	({ Email, Key, ID }: Environment): Promise<any[]>;
 }
-
-import type Environment from "../Type/Environment.js";
