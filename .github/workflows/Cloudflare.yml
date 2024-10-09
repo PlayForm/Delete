@@ -55,7 +55,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4.2.1
 
-            - uses: cloudflare/wrangler-action@v3.8.0
+            - uses: cloudflare/wrangler-action@v3.9.0
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   accountId: ${{ secrets.CF_ACCOUNT_ID }}
