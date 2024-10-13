@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Response.js";
+
 /**
  * The function `Response` is an asynchronous function that returns a response object with a JSON
  * stringified message and a specified status code.
@@ -8,4 +10,3 @@
  */
 declare const _default: Interface;
 export default _default;
-import type Interface from "../Interface/Response.js";
