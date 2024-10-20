@@ -8,7 +8,7 @@ import type Interface from "../Interface/Delete.js";
 export default (async (
 	...[
 		{ Email, ID, Key } = Environment.parse(process.env),
-	]: Parameters<Interface>
+	]
 ) => {
 	const Header = {
 		"content-type": "application/json;charset=UTF-8",
