@@ -1,10 +1,9 @@
 import type { HeadersInit } from "@cloudflare/workers-types/experimental/index.js";
-
 export type Type = {
-	result: {
-		id: string;
-		name: string;
-	}[];
+    result: {
+        id: string;
+        name: string;
+    }[];
 };
 /**
  * The function `Project` makes an asynchronous request to the Cloudflare API to fetch a
@@ -17,13 +16,8 @@ export type Type = {
  * is a type alias for an object that can be used to initialize a `Headers` object. The
  * headers can include information such as authentication tokens, content
  */
-declare const _default: (
-	ID: string,
-	Header: HeadersInit,
-) => Promise<
-	{
-		id: string;
-		name: string;
-	}[]
->;
+declare const _default: (ID: string, Header: HeadersInit) => Promise<{
+    id: string;
+    name: string;
+}[]>;
 export default _default;
