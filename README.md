@@ -44,7 +44,9 @@ wrangler deploy
 **`Source/Main.ts`**
 
 ```ts
-await(await import("@playform/delete"))(Email, ID, Key);
+await (
+	await import("@playform/delete")
+)(Email, ID, Key);
 ```
 
 **`.env`**
