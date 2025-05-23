@@ -1,7 +1,7 @@
 # [Delete] ♻️
 
 Delete stale Cloudflare Pages deployment. \
-HTTPS://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
+https://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
 
 ## Installation 🚀
 
@@ -37,7 +37,7 @@ You can also publish it as a worker:
 wrangler deploy
 ```
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=HTTPS://github.com/PlayForm/Delete)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/PlayForm/Delete)
 
 ## Script
 
@@ -61,4 +61,4 @@ Key="accountKey"
 
 See [`CHANGELOG.md`](CHANGELOG.md) for a history of changes to this utility.
 
-[Delete]: HTTPS://NPMJS.Org/@playform/delete
+[Delete]: https://NPMJS.Org/@playform/delete
