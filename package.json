@@ -35,11 +35,11 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"dotenv": "17.2.0",
-		"zod": "4.0.5"
+		"dotenv": "17.2.1",
+		"zod": "4.0.10"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20250722.0",
+		"@cloudflare/workers-types": "4.20250726.0",
 		"@playform/build": "0.2.5",
 		"@types/node": "24.1.0"
 	},
