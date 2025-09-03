@@ -35,7 +35,7 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"dotenv": "17.2.1",
+		"dotenv": "17.2.2",
 		"zod": "4.1.5"
 	},
 	"devDependencies": {
