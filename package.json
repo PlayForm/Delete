@@ -36,7 +36,7 @@
 	},
 	"dependencies": {
 		"dotenv": "17.2.3",
-		"zod": "4.2.1"
+		"zod": "4.3.4"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20251231.0",
