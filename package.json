@@ -39,7 +39,7 @@
 		"zod": "4.3.6"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20260310.1",
+		"@cloudflare/workers-types": "4.20260312.1",
 		"@playform/build": "0.3.0",
 		"@types/node": "25.4.0"
 	},
