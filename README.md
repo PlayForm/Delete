@@ -32,6 +32,15 @@ npm install -g @playform/delete
 
 ### CLI
 
+All flags fall back to `.env` values when not provided on the command line, so
+running `Delete` with no arguments will use whatever is set in `.env`:
+
+```sh
+Delete
+```
+
+or override any value explicitly:
+
 ```sh
 Delete -t <Token> -i <AccountID> -p <Project>
 ```
@@ -92,8 +101,10 @@ wrangler deploy
 
 [Delete]: HTTPS://NPMJS.Org/@playform/delete
 [cloudflare-pages]: HTTPS://developers.cloudflare.com/pages/
-[cloudflare-api]: HTTPS://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
-[cloudflare-tokens]: HTTPS://developers.cloudflare.com/fundamentals/api/get-started/create-token/
+[cloudflare-api]:
+	HTTPS://developers.cloudflare.com/api/operations/pages-deployment-delete-deployment
+[cloudflare-tokens]:
+	HTTPS://developers.cloudflare.com/fundamentals/api/get-started/create-token/
 [cloudflare-workers]: HTTPS://developers.cloudflare.com/workers/
 
 ## Changelog

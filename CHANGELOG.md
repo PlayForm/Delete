@@ -7,6 +7,8 @@
 - Implement `Delete.ts` - deletes deployments using Bearer token or Email + Key
   auth, with `?force=true` and optional single-project filter
 - Add `Token` and `Project` fields to environment schema and CLI (`-t`, `-p`)
+- CLI loads `.env` via dotenv and uses it as default for all flags - `Delete`
+  with no arguments runs from `.env`
 - Add `Configuration/ESBuild.ts` aligned with the PlayForm build pipeline
 
 ### Fix
