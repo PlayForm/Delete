@@ -1,2 +1,22 @@
 #!/usr/bin/env node
-var i=new(await import("commander")).Command().name("Delete").version("0.0.1").description("Delete\u2001\u267B\uFE0F").option("-e, --Email <Email>","Account email (for Global API Key auth).").option("-i, --ID <ID>","Account ID.").option("-k, --Key <Key>","Global API key (for Email auth).").option("-t, --Token <Token>","API token (preferred over Email + Key).").option("-p, --Project <Project>","Pages project name (omit to process all projects).").action(async({Email:e,ID:o,Key:t,Token:a,Project:n})=>console.log(await(await import("../Function/Delete.js")).default({Email:e,ID:o,Key:t,Token:a,Project:n}))).parse();export{i as default};
+var i = new (await import("commander")).Command()
+	.name("Delete")
+	.version("0.0.1")
+	.description("Delete\u2001\u267B\uFE0F")
+	.option("-e, --Email <Email>", "Account email (for Global API Key auth).")
+	.option("-i, --ID <ID>", "Account ID.")
+	.option("-k, --Key <Key>", "Global API key (for Email auth).")
+	.option("-t, --Token <Token>", "API token (preferred over Email + Key).")
+	.option(
+		"-p, --Project <Project>",
+		"Pages project name (omit to process all projects).",
+	)
+	.action(async ({ Email: e, ID: o, Key: t, Token: a, Project: n }) =>
+		console.log(
+			await (
+				await import("../Function/Delete.js")
+			).default({ Email: e, ID: o, Key: t, Token: a, Project: n }),
+		),
+	)
+	.parse();
+export { i as default };

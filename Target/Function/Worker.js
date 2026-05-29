@@ -1,1 +1,7 @@
-const{default:t}=await import("./Delete.js");var r={fetch:async(o,e,n)=>await(await import("./Response.js")).default(await t(e)),scheduled:async(o,e,n)=>console.log(await t(e))};export{t as Delete,r as default};
+const { default: t } = await import("./Delete.js");
+var r = {
+	fetch: async (o, e, n) =>
+		await (await import("./Response.js")).default(await t(e)),
+	scheduled: async (o, e, n) => console.log(await t(e)),
+};
+export { t as Delete, r as default };

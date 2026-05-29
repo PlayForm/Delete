@@ -12,7 +12,10 @@ export default new (await import("commander")).Command()
 	.option("-i, --ID <ID>", "Account ID.")
 	.option("-k, --Key <Key>", "Global API key (for Email auth).")
 	.option("-t, --Token <Token>", "API token (preferred over Email + Key).")
-	.option("-p, --Project <Project>", "Pages project name (omit to process all projects).")
+	.option(
+		"-p, --Project <Project>",
+		"Pages project name (omit to process all projects).",
+	)
 	.action(async ({ Email, ID, Key, Token, Project }) =>
 		console.log(
 			await (

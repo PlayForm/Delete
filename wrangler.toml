@@ -1,7 +1,7 @@
 name = "@playform/delete"
 main = "./Target/Worker.js"
 compatibility_date = "2024-11-11"
-node_compat = true
+compatibility_flags = ["nodejs_compat"]
 keep_vars = true
 send_metrics = false
 tsconfig = "./tsconfig.json"

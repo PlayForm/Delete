@@ -35,8 +35,8 @@ else
 		[[ -n "$Name" ]] && Projects+=("$Name")
 	done < <(
 		cf_curl GET \
-			"https://api.cloudflare.com/client/v4/accounts/${ID:?}/pages/projects" \
-			| jq -r '.result[].name'
+			"https://api.cloudflare.com/client/v4/accounts/${ID:?}/pages/projects" |
+			jq -r '.result[].name'
 	)
 fi
 
@@ -50,7 +50,7 @@ for ProjectName in "${Projects[@]}"; do
 			"https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${ProjectName}/deployments?per_page=25&page=${Page}")
 
 		TotalCount=$(echo "$Response" | jq -r '.result_info.total_count // 0')
-		PerPage=$(echo "$Response"    | jq -r '.result_info.per_page // 25')
+		PerPage=$(echo "$Response" | jq -r '.result_info.per_page // 25')
 		CountOnPage=$(echo "$Response" | jq -r '.result | length')
 
 		while IFS= read -r DeploymentID; do
@@ -70,8 +70,8 @@ for ProjectName in "${Projects[@]}"; do
 
 		# Stop when on the last page
 		[[ "$CountOnPage" -lt "$PerPage" ]] && break
-		[[ $(( Page * PerPage )) -ge "$TotalCount" ]] && break
+		[[ $((Page * PerPage)) -ge "$TotalCount" ]] && break
 
-		(( Page++ ))
+		((Page++))
 	done
 done

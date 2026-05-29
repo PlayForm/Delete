@@ -1,6 +1,6 @@
 {
 	"name": "@playform/delete",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": false,
 	"description": "Delete ♻️",
 	"keywords": [
@@ -31,8 +31,8 @@
 		"Delete": "Target/Class/Delete.js"
 	},
 	"scripts": {
-		"Run": "Build 'Source/**/*.ts' --Watch",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+		"Run": "Build 'Source/**/*.ts' --Watch --ESBuild Configuration/ESBuild.ts",
+		"prepublishOnly": "Build 'Source/**/*.ts' --ESBuild Configuration/ESBuild.ts"
 	},
 	"dependencies": {
 		"dotenv": "17.4.2",

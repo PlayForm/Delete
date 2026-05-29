@@ -1,1 +1,36 @@
-var d=(async({Email:i,Key:p,ID:e,Token:o,Project:r})=>{const t=o?.trim()?{Authorization:`Bearer ${o}`,"Content-Type":"application/json;charset=UTF-8"}:{"X-Auth-Email":i,"X-Auth-Key":p,"Content-Type":"application/json;charset=UTF-8"},{default:l}=await import("./Project.js"),{default:m}=await import("./Deployment.js"),u=r?.trim()?[r]:await l(e,t),a=[];for(const s of u){const f=await m(e,s,t);for(const n of f){const c=await(await fetch(`https://api.cloudflare.com/client/v4/accounts/${e}/pages/projects/${s}/deployments/${n}?force=true`,{method:"DELETE",headers:t})).json();a.push({project:s,deployment:n,success:c.success,error:c.errors[0]?.message})}}return a});export{d as default};
+var h = async ({ Email: p, Key: l, ID: e, Token: o, Project: r }) => {
+	const t = o?.trim()
+			? {
+					Authorization: `Bearer ${o}`,
+					"Content-Type": "application/json;charset=UTF-8",
+				}
+			: {
+					"X-Auth-Email": p,
+					"X-Auth-Key": l,
+					"Content-Type": "application/json;charset=UTF-8",
+				},
+		{ default: m } = await import("./Project.js"),
+		{ default: u } = await import("./Deployment.js"),
+		f = r?.trim() ? [r] : await m(e, t),
+		a = [];
+	for (const s of f) {
+		const d = await u(e, s, t);
+		for (const n of d) {
+			const c = await (
+					await fetch(
+						`https://api.cloudflare.com/client/v4/accounts/${e}/pages/projects/${s}/deployments/${n}?force=true`,
+						{ method: "DELETE", headers: t },
+					)
+				).json(),
+				i = c.errors[0]?.message;
+			a.push({
+				project: s,
+				deployment: n,
+				success: c.success,
+				...(i !== void 0 && { error: i }),
+			});
+		}
+	}
+	return a;
+};
+export { h as default };

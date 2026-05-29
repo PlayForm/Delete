@@ -21,9 +21,7 @@ export default (async ({ Email, Key, ID, Token, Project }) => {
 
 	const { default: GetProjects } = await import("@Function/Project.js");
 
-	const { default: GetDeployments } = await import(
-		"@Function/Deployment.js"
-	);
+	const { default: GetDeployments } = await import("@Function/Deployment.js");
 
 	const Projects: string[] = Project?.trim()
 		? [Project]
@@ -50,11 +48,13 @@ export default (async ({ Email, Key, ID, Token, Project }) => {
 				errors: Array<{ message: string }>;
 			};
 
+			const Message = Data.errors[0]?.message;
+
 			Results.push({
 				project: ProjectName,
 				deployment: DeploymentID,
 				success: Data.success,
-				error: Data.errors[0]?.message,
+				...(Message !== undefined && { error: Message }),
 			});
 		}
 	}
