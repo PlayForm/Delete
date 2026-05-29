@@ -20,6 +20,8 @@
 - `wrangler.toml` - replace deprecated `node_compat = true` with
   `compatibility_flags = ["nodejs_compat"]`
 - Remove committed `.d.ts` files from `Source/` - these are build artifacts
+- Add `commander` to `dependencies` - was missing, causing unpredictable version resolution at runtime
+- Fix `Class/Delete.ts` - use `.parse(process.argv, { from: "node" })` to prevent commander treating the script path as a positional argument
 
 ## 0.0.1
 

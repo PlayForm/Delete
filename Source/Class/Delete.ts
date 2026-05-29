@@ -44,4 +44,4 @@ export default new (await import("commander")).Command()
 			}),
 		),
 	)
-	.parse();
+	.parse(process.argv, { from: "node" });
