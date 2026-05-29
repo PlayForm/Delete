@@ -1,30 +1,77 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # shellcheck source=/dev/null
-source .env
+[[ -f .env ]] && source .env
 
-# Fill entries
-mapfile -t Projects < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email:?}" --header "X-Auth-Key: ${Key:?}" "https://api.cloudflare.com/client/v4/accounts/${ID:?}/pages/projects" | \jq -r '.result[].name')
+# cf_curl <METHOD> <URL>
+# Prefers API Token (Bearer) auth; falls back to Email + Global API Key.
+cf_curl() {
+	local Method="$1"
+	local URL="$2"
 
-# Clean entries
-for i in "${!Projects[@]}"; do
-	Projects[i]=$(echo "${Projects[i]}" | sed ':a;N;$!ba;s/\n//g')
-done
+	if [[ -n "${Token:-}" ]]; then
+		curl -s -X "$Method" \
+			-H "Content-Type: application/json;charset=UTF-8" \
+			-H "Authorization: Bearer ${Token}" \
+			"$URL"
+	else
+		curl -s -X "$Method" \
+			-H "Content-Type: application/json;charset=UTF-8" \
+			-H "X-Auth-Email: ${Email:?}" \
+			-H "X-Auth-Key: ${Key:?}" \
+			"$URL"
+	fi
+}
 
-# Fill entries
-for Project in "${Projects[@]}"; do
-	readarray -t Deployments < <(curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" "https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments" | jq -r .result[].id)
+# Collect projects to process.
+# Uses $Project env var or first positional argument if set; otherwise lists all.
+Projects=()
 
-	# Clean entries
-	for i in "${!Deployments[@]}"; do
-		Deployments[i]=$(echo "${Deployments[i]}" | sed ':a;N;$!ba;s/\n//g')
-	done
+if [[ -n "${Project:-${1:-}}" ]]; then
+	Projects+=("${Project:-${1:-}}")
+else
+	while IFS= read -r Name; do
+		[[ -n "$Name" ]] && Projects+=("$Name")
+	done < <(
+		cf_curl GET \
+			"https://api.cloudflare.com/client/v4/accounts/${ID:?}/pages/projects" \
+			| jq -r '.result[].name'
+	)
+fi
 
-	# Delete deployments
-	for Deployment in "${Deployments[@]}"; do
-		echo -e "$Project"
-		echo -e "$Deployment"
+for ProjectName in "${Projects[@]}"; do
+	echo "→ Project: $ProjectName"
 
-		curl -s --header "content-type: application/json;charset=UTF-8" --header "X-Auth-Email: ${Email}" --header "X-Auth-Key: ${Key}" "https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${Project}/deployments/${Deployment}" | jq -r .success
+	Page=1
+
+	while true; do
+		Response=$(cf_curl GET \
+			"https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${ProjectName}/deployments?per_page=25&page=${Page}")
+
+		TotalCount=$(echo "$Response" | jq -r '.result_info.total_count // 0')
+		PerPage=$(echo "$Response"    | jq -r '.result_info.per_page // 25')
+		CountOnPage=$(echo "$Response" | jq -r '.result | length')
+
+		while IFS= read -r DeploymentID; do
+			[[ -z "$DeploymentID" ]] && continue
+			echo -n "  Deleting ${DeploymentID}... "
+
+			Result=$(cf_curl DELETE \
+				"https://api.cloudflare.com/client/v4/accounts/${ID}/pages/projects/${ProjectName}/deployments/${DeploymentID}?force=true")
+
+			if [[ "$(echo "$Result" | jq -r '.success')" == "true" ]]; then
+				echo "✓"
+			else
+				Error=$(echo "$Result" | jq -r '.errors[0].message // "unknown error"')
+				echo "✗ ${Error}"
+			fi
+		done < <(echo "$Response" | jq -r '.result[].id')
+
+		# Stop when on the last page
+		[[ "$CountOnPage" -lt "$PerPage" ]] && break
+		[[ $(( Page * PerPage )) -ge "$TotalCount" ]] && break
+
+		(( Page++ ))
 	done
 done

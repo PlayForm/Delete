@@ -6,4 +6,6 @@ export default (await import("zod")).object({
 	Email: string().optional().default(""),
 	ID: string().optional().default(""),
 	Key: string().optional().default(""),
+	Token: string().optional().default(""),
+	Project: string().optional().default(""),
 });

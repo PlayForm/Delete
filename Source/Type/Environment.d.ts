@@ -9,4 +9,6 @@ declare const Environment: Zod.ZodObject<{
     Email: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
     ID: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
     Key: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    Token: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    Project: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
 }, Zod.core.$strip>;
