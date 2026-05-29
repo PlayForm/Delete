@@ -46,16 +46,20 @@ export default new (await import("commander")).Command()
 		"Milliseconds to wait between batches (default: 0).",
 		process.env["Delay"] ?? "0",
 	)
-	.action(async ({ Email, ID, Key, Token, Project, Logger, Batch, Delay }) =>
-		(await import("@Function/Delete.js")).default({
-			Email,
-			ID,
-			Key,
-			Token,
-			Project,
-			Logger: Number(Logger),
-			Batch: Number(Batch),
-			Delay: Number(Delay),
-		}),
+	.action(
+		async ({ Email, ID, Key, Token, Project, Logger, Batch, Delay }) => {
+			await (
+				await import("@Function/Delete.js")
+			).default({
+				Email,
+				ID,
+				Key,
+				Token,
+				Project,
+				Logger: Number(Logger),
+				Batch: Number(Batch),
+				Delay: Number(Delay),
+			});
+		},
 	)
 	.parse(process.argv, { from: "node" });
