@@ -54,7 +54,51 @@ All flags:
 -k, --Key     <Key>              Global API key (for Email auth)
 -t, --Token   <Token>            API token (preferred over Email + Key)
 -p, --Project <Project>          Pages project name (omit to process all projects)
+-l, --Logger  <Logger>           Log level: 2 = verbose, 1 = summary (default), 0 = silent
+-b, --Batch   <Batch>            Parallel deletions per batch (default: 10)
+-d, --Delay   <Delay>            Milliseconds between batches (default: 0)
 -h, --help                       display help for command
+```
+
+### Controlling Logging
+
+| Level | Output                                                               |
+| ----- | -------------------------------------------------------------------- |
+| `0`   | Silent - nothing printed                                             |
+| `1`   | Summary - project header and final deleted count only                |
+| `2`   | Verbose - batch progress and per-deployment `✓`/`✗` result (default) |
+
+**`.env`**
+
+```sh
+Logger=2
+```
+
+or via CLI:
+
+```sh
+Delete -l 0
+```
+
+CLI `-p` always overrides the `Project` value in `.env`, so you can leave
+`Project=""` in `.env` and pass `-p <name>` per run.
+
+### Batching
+
+Deletions are processed in parallel batches. Increase `Batch` for speed on large
+projects, add `Delay` to avoid hitting Cloudflare rate limits:
+
+**`.env`**
+
+```sh
+Batch=25
+Delay=500
+```
+
+or via CLI:
+
+```sh
+Delete -b 25 -d 500
 ```
 
 ### Script
