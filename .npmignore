@@ -1,12 +1,15 @@
-*.sh
 .dev.vars
 .dev.vars.example
 .env
 .env.example
 .github/
+*.sh
 CHANGELOG.md
 CODE_OF_CONDUCT.md
+Configuration/
 CONTRIBUTING.md
+DEPENDENTS.md
 docs/
+Documentation/
 Source/
 wrangler.toml

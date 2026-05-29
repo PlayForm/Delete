@@ -1,3 +1,10 @@
+## 0.1.1
+
+### Add
+
+- Exclude `Configuration/` and `Documentation/` from published package via
+  `.npmignore`
+
 ## 0.1.0
 
 ### Add
