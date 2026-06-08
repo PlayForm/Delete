@@ -42,7 +42,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20260605.1",
 		"@playform/build": "0.3.2",
-		"@types/node": "25.9.1"
+		"@types/node": "25.9.2"
 	},
 	"publishConfig": {
 		"access": "public",
