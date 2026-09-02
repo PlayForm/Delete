@@ -37,7 +37,7 @@
 	"dependencies": {
 		"commander": "15.0.0",
 		"dotenv": "17.4.2",
-		"zod": "4.5.2"
+		"zod": "4.5.4"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "5.20260829.1",
