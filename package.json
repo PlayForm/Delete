@@ -36,13 +36,13 @@
 	},
 	"dependencies": {
 		"commander": "15.0.0",
-		"dotenv": "17.4.2",
-		"zod": "4.5.4"
+		"dotenv": "18.0.4",
+		"zod": "4.6.5"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "5.20260903.1",
+		"@cloudflare/workers-types": "5.20260922.1",
 		"@playform/build": "0.3.4",
-		"@types/node": "26.4.1"
+		"@types/node": "26.6.2"
 	},
 	"publishConfig": {
 		"access": "public",
